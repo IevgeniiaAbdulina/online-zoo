@@ -90,7 +90,7 @@ h2 {
     line-height: 120%;
     /* or 58px */
 
-    color: var(--color-text);
+    color: var(--black_blue);
 }
 
 h3 {
@@ -112,7 +112,7 @@ h3 {
     line-height: 120%;
     /* or 29px */
 
-    color: var(--color-text);
+    color: var(--black_blue);
 }
 
 .sm-paragraph {
@@ -327,6 +327,44 @@ h2.banner-title span {
 
 /*-------------------------------------------------*/
 /* Backstage block */
+.backstage-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    gap: 87px;
+}
+
+.backstage-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.backstage-text {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    /* or 21px */
+
+    color: var(--black_blue);
+}
+
+.backstage-text p:nth-child(2) {
+    margin: 20px 0;
+}
+
+.backstage-text .subtitle {
+    margin-top: 54px;
+    margin-bottom: 34px;
+}
+
+img.decoration {
+    position: absolute;
+    display: none;
+}
 /*-------------------------------------------------*/
 
 /*-------------------------------------------------*/
