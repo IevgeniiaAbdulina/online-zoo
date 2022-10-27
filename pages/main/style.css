@@ -33,7 +33,8 @@
 /* Variables */
 :root {
     /* ## Layouts */
-    --layout-desktop: 1160px;
+    --layout-desktop: 1600px;
+    --layout-guides: 1160px;
 
     /* ## Colors */
         /* ### Primary */
@@ -153,7 +154,19 @@ h3 {
 
 /*-------------------------------------------------*/
 /* Body */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    width: 100vw;
+    margin: 0 auto;
+
     font-family: var(--font-family-base);
     font-style: normal;
     font-weight: var(--font-weight-base);
@@ -162,6 +175,11 @@ body {
     /* or 22px */
 
     color: var(--color-text);
+}
+
+.container {
+    max-width: var(--layout-guides);
+    margin: 0 auto;
 }
 /*-------------------------------------------------*/
 
