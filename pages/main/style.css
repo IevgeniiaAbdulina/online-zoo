@@ -79,7 +79,7 @@ h1 {
     /* or 91px */
     text-transform: uppercase;
 
-    color: var(--color-text);
+    color: var(--black_blue);
 }
 
 h2 {
@@ -101,7 +101,7 @@ h3 {
     line-height: 130%;
     /* or 47px */
 
-    color: var(--color-text);
+    color: var(--black_blue);
 }
 
 .subtitle {
@@ -123,7 +123,7 @@ h3 {
     line-height: 120%;
     /* or 18px */
 
-    color: var(--color-text);
+    color: #000000;
 }
 /*-------------------------------------------------*/
 
@@ -369,6 +369,108 @@ img.decoration {
 
 /*-------------------------------------------------*/
 /* Pets block */
+div.pets.block {
+    margin-top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.pets .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 28px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.card {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-radius: 5px;
+    border-image-source: var(--orange-btn);
+}
+
+.pets-title {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.banana-bamboo_icon {
+    width: 48px;
+    height: 48px;
+    background: no-repeat center/80% url(../../assets/icons/banana-bamboo_icon.svg);
+}
+
+.meet-fish_icon {
+    width: 48px;
+    height: 48px;
+    background: no-repeat center/100% url(../../assets/icons/meet-fish_icon.svg);
+}
+
+.pets button {
+    background: var(--orange-btn);
+    border-radius: 25px;
+    border: none;
+}
+
+.arrows {
+    position: absolute;
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow_elips {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: no-repeat center/35% url(../../assets/icons/arrow_right.svg) var(--orange);
+}
+
+.arrow_elips:nth-child(1) {
+    transform: rotate(180deg);
+}
+
+.pets .decoration.left {
+    display: none;
+    width: 100%;
+    height: auto;
+    background: no-repeat center/100% url(../../assets/images/palm_foto.png);
+}
+
+.pets .decoration.right {
+    display: none;
+    width: 100%;
+    height: auto;
+    background: no-repeat center/100% url(../../assets/images/strelitzia1.png);
+}
 /*-------------------------------------------------*/
 
 /*-------------------------------------------------*/
