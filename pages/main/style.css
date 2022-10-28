@@ -361,9 +361,10 @@ h2.banner-title span {
     margin-bottom: 34px;
 }
 
-img.decoration {
+.backstage-decoration {
     position: absolute;
-    display: none;
+    right: 0;
+    margin-top: -140px;
 }
 /*-------------------------------------------------*/
 
@@ -458,18 +459,18 @@ div.pets.block {
     transform: rotate(180deg);
 }
 
-.pets .decoration.left {
-    display: none;
-    width: 100%;
-    height: auto;
-    background: no-repeat center/100% url(../../assets/images/palm_foto.png);
+.pets-decoration.left {
+    position: absolute;
+    left: 0;
+    margin-top: 390px;
+    z-index: -1;
 }
 
-.pets .decoration.right {
-    display: none;
-    width: 100%;
-    height: auto;
-    background: no-repeat center/100% url(../../assets/images/strelitzia1.png);
+.pets-decoration.right {
+    position: absolute;
+    right: 0;
+    margin-top: 480px;
+    z-index: -1;
 }
 /*-------------------------------------------------*/
 
@@ -711,13 +712,11 @@ div.line_scrol::before {
     align-self: flex-start;
 }
 
-.testimonials .decoration {
-    width: 300px;
-    height: 300px;
-    background: url(../../assets/images/leav_foto.png);
-    position: relative;
-    float: right;
-    margin-top: -300px;
+.testimonials-decoration {
+    position: absolute;
+    right: 0;
+    margin-top: -275px;
+    z-index: -1;
 }
 /*-------------------------------------------------*/
 
