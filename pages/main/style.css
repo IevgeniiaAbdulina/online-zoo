@@ -591,6 +591,134 @@ div.pets.block {
 
 /*-------------------------------------------------*/
 /* Testimonials block */
+.testimonials .container {
+    margin-top: 140px;
+    margin-bottom: 180px;
+}
+
+.testimonials h3 {
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.text-block-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.text-block-box {
+    width: calc((100% / 4) - 15px);
+    height: 390px;
+    padding: 16px 16px 20px;
+    border: 1px solid var(--orange);
+    border-radius: 20px;
+    border-image: var(--pink_gradient);
+    background-color: var(--gray_light);
+}
+
+.text-block-box .box-body p {
+    white-space: normal;
+    text-overflow: clip;
+    color: var(--gray);
+}
+
+.box-header .user-icon.user-one {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user_icon.png);
+}
+
+.box-header .user-icon.user-two {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user2.png);
+}
+
+.box-header .user-icon.user-three {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user3.png);
+}
+
+.box-header .user-icon.user-four {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user4.png);
+}
+
+.user-icon {
+    margin-right: 10px;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+
+    color: #000000;
+}
+
+.personal-info .row {
+    display: flex;
+    color: #BDBDBD;
+}
+
+.row .location {
+    margin-right: 16px;
+}
+
+.line_scrol {
+    width: 600px;
+    height: 8px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #F5F7F6;
+}
+
+div.line_scrol::before {
+    content: '';
+    position: absolute;
+    width: 115px;
+    height: 6px;
+    background: #FE9013;
+    border-radius: 5px;
+}
+
+.testimonials button {
+    width: 298px;
+    height: 54px;
+
+    background: var(--orange-btn);
+    border-radius: 5px;
+    border: none;
+    align-self: flex-start;
+}
+
+.testimonials .decoration {
+    width: 300px;
+    height: 300px;
+    background: url(../../assets/images/leav_foto.png);
+    position: relative;
+    float: right;
+    margin-top: -300px;
+}
 /*-------------------------------------------------*/
 
 /*-------------------------------------------------*/
