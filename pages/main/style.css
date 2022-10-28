@@ -442,7 +442,7 @@ div.pets.block {
 
 .arrows {
     position: absolute;
-    width: 84%;
+    /* width: 84%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -453,10 +453,12 @@ div.pets.block {
     height: 62px;
     border-radius: 50%;
     background: no-repeat center/35% url(../../assets/icons/arrow_right.svg) var(--orange);
+    margin-right: 1180px;
 }
 
 .arrow_elips:nth-child(1) {
     transform: rotate(180deg);
+    margin-left: 1180px;
 }
 
 .pets-decoration.left {
