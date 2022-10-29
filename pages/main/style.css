@@ -134,23 +134,67 @@ h3 {
 /*-------------------------------------------------*/
 /* Components Buttons */
 .btn {
+    width: 300px;
+    height: 54px;
+    padding: 5px 16px;
+
     font-family: var(--font-family-base);
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
 
-    padding: 5px 16px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
 
-    color: var(--white);
-
-    width: 300px;
-    height: 54px;
     background: var(--orange-btn);
+    color: var(--white);
+}
+
+button.rounded {
     border-radius: 25px;
+}
+
+button.square {
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #E47209;
+}
+
+.btn:active {
+    background-color: var(--green);
+}
+
+.btn:disabled {
+    background-color: var(--gray);
+}
+
+.arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow_elips {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: no-repeat center/35% url(../../assets/icons/arrow_right.svg) var(--orange);
+    margin-right: 1180px;
+}
+
+.arrow_elips:nth-child(1) {
+    transform: rotate(180deg);
+    margin-left: 1180px;
+}
+
+.arrow_elips:active {
+    background-color: var(--green);
+    transition: 0.2s;
 }
 /*-------------------------------------------------*/
 
@@ -317,12 +361,11 @@ h2.banner-title {
     font-weight: 700;
     font-size: 106px;
     line-height: 75%;
-    /* or 80px */
 
     text-align: center;
     text-transform: uppercase;
-
     color: var(--white);
+    z-index: 1;
 }
 
 h2.banner-title span {
@@ -333,6 +376,17 @@ h2.banner-title span {
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.banner-content::after {
+    position: relative;
+    content: "";
+    width: 465px;
+    height: 465px;
+    bottom: 584px;
+    right: 91px;
+    border-radius: 50%;
+    background: var(--orange-btn);
 }
 /*-------------------------------------------------*/
 
@@ -428,8 +482,6 @@ div.pets.block {
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
-
     text-transform: uppercase;
 
     color: #000000;
@@ -448,30 +500,7 @@ div.pets.block {
 }
 
 .pets button {
-    background: var(--orange-btn);
-    border-radius: 25px;
     border: none;
-}
-
-.arrows {
-    position: absolute;
-    /* width: 84%; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.arrow_elips {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: no-repeat center/35% url(../../assets/icons/arrow_right.svg) var(--orange);
-    margin-right: 1180px;
-}
-
-.arrow_elips:nth-child(1) {
-    transform: rotate(180deg);
-    margin-left: 1180px;
 }
 
 .pets-decoration.left {
@@ -717,12 +746,16 @@ div.line_scrol::before {
     border-radius: 5px;
 }
 
-.testimonials button {
-    width: 298px;
-    height: 54px;
-
-    background: var(--orange-btn);
+.line_scrol:hover::before {
+    content: '';
+    position: absolute;
+    width: 115px;
+    height: 6px;
+    background: var(--green);
     border-radius: 5px;
+}
+
+.testimonials button {
     border: none;
     align-self: flex-start;
 }
@@ -774,32 +807,21 @@ footer .container {
 
 .subscribe input[type="submit"] {
     background: var(--gray_light);
-    color: var(--green);
+    /* color: #000000; */
+    color: var(--red);
     padding: 10px 40px;
-    border: 1px solid var(--green);
+    /* border: 1px solid var(--black_blue); */
+    border: 1px solid var(--red);
     border-radius: 5px;
+}
+
+.subscribe input[type="submit"]:hover {
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 
 .subscribe-wrapper {
     margin-bottom: 44px;
-}
-
-.subscribe-wrapper button {
-    width: 300px;
-    height: 54px;
-
-    background: var(--orange-btn);
-    border-radius: 5px;
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    /* or 22px */
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: var(--white);
 }
 
 .links-wrapper {
@@ -833,11 +855,25 @@ nav.social-media-links ul > li  {
     background-color: rgba(196, 196, 196, 0.5);;
 }
 
+.social-media-links li:hover a {
+    color: var(--green);
+}
+
+.social-media-links li:hover img {
+    background-color: var(--green);
+}
+
 .attribution p {
     font-weight: 100;
     font-size: 16px;
     line-height: 130%;
     color: #FFFFFF;
+}
+
+.attribution p:hover {
+    color: var(--green);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .attribution p:nth-child(1) {
