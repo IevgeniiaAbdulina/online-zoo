@@ -232,7 +232,7 @@ header .navigation-wrapper {
     border-radius: 2px;
 }
 
-.logo h1::after {
+.logo .petstory::after {
     content: url(../../assets/icons/bamboo.svg);
     position: relative;
     width: 7px;
@@ -244,7 +244,7 @@ header .navigation-wrapper {
     text-decoration: none;
 }
 
-.logo h1 {
+.logo .petstory {
     font-family: var(--font-family-base);
     font-style: normal;
     font-weight: 400;
@@ -728,33 +728,52 @@ div.pets.block {
     margin-right: 16px;
 }
 
-.line_scrol {
-    width: 600px;
-    height: 8px;
+/* ---------------------------------------------- */
+input {
     margin-top: 20px;
     margin-bottom: 30px;
-    border-radius: 5px;
-    background-color: #F5F7F6;
-}
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  }
 
-div.line_scrol::before {
-    content: '';
-    position: absolute;
-    width: 115px;
+  input[type=range] {
+    height: 9px;
+    -webkit-appearance: none;
+    padding: 0 1px;
+    width: 600px;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 600px;
+    height: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #F5F7F6;
+    border-radius: 5px;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
     height: 6px;
+    width: 115px;
+    border-radius: 5px;
     background: #FE9013;
-    border-radius: 5px;
-}
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 0.5px;
+  }
 
-.line_scrol:hover::before {
-    content: '';
-    position: absolute;
-    width: 115px;
-    height: 6px;
-    background: var(--green);
-    border-radius: 5px;
-}
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #F5F7F6;
+  }
 
+  input[type=range]:focus::-webkit-slider-thumb {
+    background: #E47209;
+  }
+/* ---------------------------------------------- */
 .testimonials button {
     border: none;
     align-self: flex-start;
