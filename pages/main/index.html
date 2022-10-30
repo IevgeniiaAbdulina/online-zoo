@@ -257,13 +257,13 @@
                             <div class="petstory">PetStory Online</div>
                         </a>
                     </div>
-                    <div class="subscribe">
+                    <form class="subscribe">
                         <label for="email">Subscribe to our news</label>
                         <div class="input-wrapper">
-                            <input type="email" id="email" pattern=".+@globex\.com" size="30" required placeholder="Enter your email">
-                            <input type="submit" value="Submit">
+                            <input type="email" id="email" size="30" required placeholder="Enter your email">
+                            <input type="submit" value="Submit" @click="checkForm()">
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <a href="../donate/index.html"><button class="btn square" type="button">donate for volunteers</button></a>
             </div>

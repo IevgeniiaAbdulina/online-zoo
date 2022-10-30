@@ -832,23 +832,29 @@ footer .container {
     padding: 10px;
     border: 1px solid var(--orange);
     border-radius: 2px;
-    background-color: transparent;
+    background: #111115;
     margin-right: 10px;
     color: #FFFFFF;
 }
 
-.subscribe input[type="submit"] {
+input[type="submit"] {
     background: var(--gray_light);
-    /* color: #000000; */
-    color: var(--red);
+    color: #000000;
     padding: 10px 40px;
-    /* border: 1px solid var(--black_blue); */
-    border: 1px solid var(--red);
+    border: 1px solid var(--black_blue);
     border-radius: 5px;
 }
 
-.subscribe input[type="submit"]:hover {
-    color: var(--green);
+input[type="email"]:hover {
+    border: 1px solid var(--green);
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border: 1px solid var(--red);
+}
+
+input[type="email"]:valid {
     border: 1px solid var(--green);
 }
 
