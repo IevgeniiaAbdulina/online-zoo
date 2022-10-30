@@ -901,6 +901,11 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
+input[type="submit"].invalid {
+    color: red;
+    border: 2px solid red;
+}
+
 input[type="email"]:hover {
     border: 1px solid var(--green);
 }
