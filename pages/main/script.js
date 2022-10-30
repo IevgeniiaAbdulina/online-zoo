@@ -20,7 +20,11 @@ function navClicked(event) {
 const buttonSubmit = document.getElementById("submit");
 buttonSubmit.addEventListener("click", event => {
     event.preventDefault();
-    if (input.validity.valid) alert("You are subscribed =)");
+    if (input.validity.valid) {
+        alert("You are subscribed =)");
+    } else {
+        alert("Please, write a correct email to subscribe!");
+    }
 });
 
 const updateButtonState = () => {
@@ -39,3 +43,7 @@ input.addEventListener("input", event =>{
 input.addEventListener("focus", event =>{
     updateButtonState();
 });
+
+input.addEventListener("focusout", event => {
+    buttonSubmit.classList.remove("invalid");
+})
