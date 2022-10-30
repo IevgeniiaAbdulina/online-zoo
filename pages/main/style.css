@@ -664,10 +664,23 @@ div.pets.block {
     width: calc((100% / 4) - 15px);
     height: 390px;
     padding: 16px 16px 20px;
-    border: 1px solid var(--orange);
+    position: relative;
+    border: 1px solid transparent;
     border-radius: 20px;
-    border-image: var(--pink_gradient);
-    background-color: var(--gray_light);
+    background:  var(--gray_light);
+    background-clip: border-box;
+}
+
+.text-block-box::after {
+    position: absolute;
+    content: "";
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border-radius: 22px;
+    background: var(--pink_gradient);
+    z-index: -1;
 }
 
 .text-block-box .box-body p {
@@ -737,7 +750,7 @@ input {
   }
 
   input[type=range] {
-    height: 9px;
+    height: 12px;
     -webkit-appearance: none;
     padding: 0 1px;
     width: 600px;
