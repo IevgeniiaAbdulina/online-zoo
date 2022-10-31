@@ -1,0 +1,149 @@
+[33mcommit 657170bcec80b9463b0b5b9c597afa7d0029c074[m[33m ([m[1;36mHEAD -> [m[1;32monline-zoo[m[33m, [m[1;31morigin/online-zoo[m[33m)[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 23:22:01 2022 +0100
+
+    docs: update readme with project link
+
+[33mcommit 21710e4d5a358d32eb293f9dde59a371c04aa370[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 22:58:58 2022 +0100
+
+    docs: update readme with project link
+
+[33mcommit 43dbdd3dd353272214023425b9ddb93897ba9abe[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 22:26:41 2022 +0100
+
+    docs: update readme with project link information
+
+[33mcommit 6df23dba787555f769eaa0c13084824f7aa974c5[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 22:17:52 2022 +0100
+
+    refactor: clear code
+
+[33mcommit 545f6196d56b22eb5ab570a12aa9dceadf8f5201[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 21:32:04 2022 +0100
+
+    feat: implement correct button Submit, depends on Form validation
+
+[33mcommit a019ecdabaccf6230faf0127f299f8c3a6d13869[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 18:00:49 2022 +0100
+
+    feat: add interactive Animal cards, Pets block
+
+[33mcommit 7cf1521ccb93832134734ef12a6090cdc4cf1f9c[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 13:22:39 2022 +0100
+
+    refactor: change Subscribe Form Input style
+
+[33mcommit 2f3ab1d93eab3f8df8e68932bd66a0741db39d8f[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sun Oct 30 11:17:50 2022 +0100
+
+    refactor: change Testimonials card border style
+
+[33mcommit 6e099b095f0bddc5f974b83614b08c110dc1a105[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sat Oct 29 22:58:20 2022 +0200
+
+    refactor: change progress bar through input type range and style it
+
+[33mcommit 700a17ce5f2bcd5067604f59ac791144e40d6f92[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sat Oct 29 17:11:34 2022 +0200
+
+    refactor: add Interactive buttons and Social media panel
+
+[33mcommit 5f5ee2b54594d122b0ab76e85bebc678e8d2daba[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Sat Oct 29 14:29:42 2022 +0200
+
+    refactor: change the structure of the Header navigation links
+
+[33mcommit 874d8a54ba375223fcb5cb27a288d1b33f6973b9[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Fri Oct 28 22:42:27 2022 +0200
+
+    fix: implement correct spacing between arrows at Pets block
+
+[33mcommit 90d8a7a8101913a27b9ab5bf68272bc4bcafd913[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Fri Oct 28 22:36:52 2022 +0200
+
+    feat: add plants decoration elements
+
+[33mcommit 89f309106272d172c1f93083b2dfa19131f8b469[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Fri Oct 28 22:07:54 2022 +0200
+
+    feat: add Footer block elements
+
+[33mcommit 58af58f65041d988195e2d85fce89664f345c010[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Fri Oct 28 18:36:03 2022 +0200
+
+    feat: add Testimonials block elements
+
+[33mcommit 89b11da2bdb72eef80f488855055ad606839bb18[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Fri Oct 28 15:17:04 2022 +0200
+
+    feat: add Pick-and-Feed block elements
+
+[33mcommit 04564be2d8cdbae2785b03a68b9277669e64bd67[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Fri Oct 28 13:39:16 2022 +0200
+
+    feat: add Pets block elements
+
+[33mcommit ee437f0d6161757f8375d0948b571225c7793cd9[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Thu Oct 27 21:11:00 2022 +0200
+
+    feat: add Backstage block elements
+
+[33mcommit 18c3d88c8ce5f6329b2c50fbef1f41ab786e6b4c[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Thu Oct 27 20:27:20 2022 +0200
+
+    feat: add Banner block elements
+
+[33mcommit 90dd36ec2ce745b9c5e66459f934dd3ac1211397[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Thu Oct 27 18:26:21 2022 +0200
+
+    feat: add Header block elements
+
+[33mcommit 95ff16c687c58c56e955c6a0a86ac106f4c640df[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Thu Oct 27 15:21:40 2022 +0200
+
+    feat: add General Layout style
+
+[33mcommit 5aea4aa6432c42b9e8192fa13a37240279834930[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Thu Oct 27 13:55:06 2022 +0200
+
+    feat: add basic CSS stylesheet structure
+
+[33mcommit 1aa1f799fb01f5591f003477f03827a93550dbc1[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Thu Oct 27 12:38:26 2022 +0200
+
+    feat: add basic html structure
+
+[33mcommit bd8d9115d40f0f06c84714147b19e5c2d122db76[m
+Author: Ievgeniia Abdulina <ievgeniiaabdulina@gmail.com>
+Date:   Wed Oct 26 17:13:06 2022 +0200
+
+    feat: add project structure
+
+[33mcommit dbaab31624b0c5e36915cbed34ede08003d0249a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Ievgeniia <ievgeniiaabdulina@gmail.com>
+Date:   Wed Oct 26 16:38:13 2022 +0200
+
+    Initial commit
