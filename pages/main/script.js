@@ -40,10 +40,6 @@ input.addEventListener("input", event =>{
     updateButtonState();
 });
 
-input.addEventListener("focus", event =>{
-    updateButtonState();
-});
-
 input.addEventListener("focusout", event => {
     buttonSubmit.classList.remove("invalid");
 })
