@@ -10,7 +10,6 @@
 /*-------------------------------------------------
     ==== File Structure  ====
         * Main Stylesheet
-        * Components Dotts
         * Banner block
         * Donation Information block
 -------------------------------------------------*/
@@ -22,10 +21,6 @@
 body {
     color: #333B41;
 }
-/*-------------------------------------------------*/
-
-/*-------------------------------------------------*/
-/* Components Dotts */
 /*-------------------------------------------------*/
 
 /*-------------------------------------------------*/
@@ -146,22 +141,104 @@ img.animals-widget {
     height: 100%;
 }
 
-/* feed-range */
+/* Feed Range */
+.feed-range-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .feed-range-container p:nth-child(1) {
-    margin-bottom: 10px;
     color: #000000;
 }
 
-.feed-range-line {
+.feed-range {
     width: 976px;
     height: 27px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 2px;
     background: #404950;
 }
 
+.feed-range-line {
+    width: 915px;
+    height: 2px;
+    background: #72828E;
+}
+
+.feed-range-dott-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.feed-range-dott-container {
+    width: 950px;
+    height: 20px;
+    list-style: none;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yellow-dott {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFEE2E;
+}
+
+.feed-range-dott {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-dott {
+    background: center / contain no-repeat url(../../assets/icons/roller_icon.svg);
+}
+
+/* Feed Range Values */
+.feed-range-values {
+    width: 98%;
+    height: 36px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range-value {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 70px;
+}
+
+.range-value img {
+    width: 10px;
+    height: 20px;
+    margin-right: 2px;
+}
+
 /* another-amount */
 .another-amount {
-    margin-top: 50px;
+    
 }
 
 /* monthly-once */
@@ -171,7 +248,6 @@ img.animals-widget {
 }
 
 .feed-donation-info p {
-    margin-top: 30px;
     color: #333B41;
 }
 /*-------------------------------------------------*/
