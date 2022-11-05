@@ -84,6 +84,9 @@ body {
     border-radius: 20px;
     padding: 40px 90px 60px;
     margin-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .feed-donation-info h2 {
@@ -93,6 +96,7 @@ body {
 }
 
 .feed-donation-info .subtitle {
+    align-self: flex-start;
     color: #333B41;
 }
 
@@ -236,9 +240,45 @@ ul.feed-range-dott-container {
     margin-right: 2px;
 }
 
-/* another-amount */
+/* Another Amount */
 .another-amount {
-    
+    position: relative;
+    width: 268px;
+    height: 54px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.another-amount form {
+    width: 100%;
+    height: 100%;
+}
+
+input[type=text].another-amount-input {
+    width: 100%;
+    height: 100%;
+    padding: 16px 10px;
+    margin: 0;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    background: transparent;
+    color: #929699;
+}
+
+input[type=text].another-amount-input:hover,
+input[type=text].another-amount-input:focus  {
+    outline: none;
+    border: 1px solid #4B9200;
+    border-radius: 2px;
+}
+
+.dollar-ic {
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
 }
 
 /* monthly-once */
