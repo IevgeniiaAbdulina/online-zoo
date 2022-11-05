@@ -105,12 +105,17 @@ body {
     border: none;
 }
 
+/* Feed Count */
 .feed-count-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
     margin-bottom: 50px;
+}
+
+.feed-count-content {
+    padding-top: 60px;
 }
 
 .feed-count-content div:nth-child(1) {
@@ -130,8 +135,15 @@ body {
 }
 
 .ic-wrap {
+    width: 14px;
+    height: 14px;
     margin-left: 10px;
     margin-right: 64px;
+}
+
+img.animals-widget {
+    width: 284px;
+    height: 100%;
 }
 
 /* feed-range */
