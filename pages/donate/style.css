@@ -12,6 +12,11 @@
         * Main Stylesheet
         * Banner block
         * Donation Information block
+            - Feed Count
+            - Feed Range
+            - Feed Range Values
+            - Another Amount
+            - Monthly / Once
 -------------------------------------------------*/
 
 /*-------------------------------------------------*/
@@ -80,7 +85,6 @@ body {
     width: 100%;
     height: auto;
     background: rgba(255, 255, 255, 0.52);
-    /* backdrop-filter: blur(2px); */
     border-radius: 20px;
     padding: 40px 90px 60px;
     margin-bottom: 180px;
@@ -103,7 +107,9 @@ body {
 .feed button[type=button] {
     border: none;
 }
+/*-------------------------------------------------*/
 
+/*-------------------------------------------------*/
 /* Feed Count */
 .feed-count-wrap {
     display: flex;
@@ -144,7 +150,9 @@ img.animals-widget {
     width: 284px;
     height: 100%;
 }
+/*-------------------------------------------------*/
 
+/*-------------------------------------------------*/
 /* Feed Range */
 .feed-range-container {
     display: flex;
@@ -209,7 +217,9 @@ ul.feed-range-dott-container {
 .active-dott {
     background: center / contain no-repeat url(../../assets/icons/roller_icon.svg);
 }
+/*-------------------------------------------------*/
 
+/*-------------------------------------------------*/
 /* Feed Range Values */
 .feed-range-values {
     width: 98%;
@@ -239,7 +249,9 @@ ul.feed-range-dott-container {
     height: 20px;
     margin-right: 2px;
 }
+/*-------------------------------------------------*/
 
+/*-------------------------------------------------*/
 /* Another Amount */
 .another-amount {
     position: relative;
@@ -281,7 +293,9 @@ input[type=text].another-amount-input:focus  {
     position: absolute;
     right: 10px;
 }
+/*-------------------------------------------------*/
 
+/*-------------------------------------------------*/
 /* Monthly / Once */
 .monthly-once {
     width: 212px;
@@ -324,7 +338,7 @@ input[type=radio]:checked {
     align-items: center;
 }
 
-.feed-donation-info p {
+.share {
     margin-top: 30px;
     color: #333B41;
 }
