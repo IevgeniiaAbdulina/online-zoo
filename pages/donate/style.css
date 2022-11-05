@@ -1,1 +1,96 @@
+/*-------------------------------------------------
+    [Donate Page Stylesheet]
+
+    Project:    Online-Zoo Web Project
+    Version:    1.0.0
+    Challenge:  RS School
+    Coded:      Ievgeniia Abdulina
+    Date:       05-11-2022
+-------------------------------------------------*/
+/*-------------------------------------------------
+    ==== File Structure  ====
+        * Main Stylesheet
+        * Components Dotts
+        * Banner block
+        * Donation Information block
+-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* Main Stylesheet + Header / Footer  */
 @import url(../main/style.css);
+
+body {
+    color: #333B41;
+}
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* Components Dotts */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* Banner block */
+.banner-block {
+    width: 100%;
+    height: 390px;
+    background-image: url(../../assets/images/giant-panda.png);
+    background-size: cover;
+    background-position: center;
+}
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* Donation Information block */
+section.feed {
+    background: var(--orange_gradient);
+}
+
+.feed .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feed-text h3:nth-child(1) {
+    color: #FFFFFF;
+}
+
+.feed-text p {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.feed-text h3:nth-child(3) {
+    color: #FE9013;
+}
+
+.feed-donation-info {
+    width: 100%;
+    height: 964px;
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+
+.feed-donation-info h2 {
+    text-align: center;
+    color: #FE9013;
+}
+
+.feed-donation-info .subtitle {
+    color: #333B41;
+}
+
+.feed button[type=button] {
+    border: none;
+}
+
+
+/*-------------------------------------------------*/
