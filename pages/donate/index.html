@@ -63,81 +63,81 @@
                         <p>Amount</p>
                         <div class="feed-range">
                             <div class="feed-range-line"></div>
-                            <ul class="feed-range-dott-container">
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                            <ul class="feed-range-dot-container">
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott active-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot active-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
-                                <li class="feed-range-dott">
-                                    <div class="yellow-dott"></div>
+                                <li class="feed-range-dot">
+                                    <div class="yellow-dot"></div>
                                 </li>
                             </ul>
                         </div>
                         <ul class="feed-range-values">
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>5000</p>
+                                <p class="label">5000</p>
                             </li>
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>2000</p>
+                                <p class="label">2000</p>
+                            </li>
+                            <li class="range-value">
+                                <img src="../../assets/icons/dollar-ic-orange.svg" alt="dollar icon">
+                                <p class="label active">1000</p>
                             </li>
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>1000</p>
+                                <p class="label">500</p>
                             </li>
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>500</p>
+                                <p class="label">250</p>
                             </li>
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>250</p>
+                                <p class="label">100</p>
                             </li>
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>100</p>
+                                <p class="label">50</p>
                             </li>
                             <li class="range-value">
                                 <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>50</p>
-                            </li>
-                            <li class="range-value">
-                                <img src="../../assets/icons/dollar-ic.svg" alt="dollar icon">
-                                <p>25</p>
+                                <p class="label">25</p>
                             </li>
                         </ul>
                     </div>
                     <div class="another-amount">
                         <form action="">
-                            <input type="text" class="another-amount-input" placeholder="Another amount">
+                            <input type="number" class="another-amount-input" placeholder="Another amount" min="1" max="9999">
                         </form>
                         <img class="dollar-ic" src="../../assets/icons/dollar-ic-2.svg" alt="dollar icon">
                     </div>
                     <form class="monthly-once">
                         <div class="payment">
-                            <input type="radio" name="monthly" id="monthly" value="Monthly">
+                            <input type="radio" name="payment" id="monthly" value="Monthly">
                             <label for="monthly">Monthly</label>
                         </div>
                         <div class="payment">
-                            <input type="radio" name="once" id="once" value="once" checked>
+                            <input type="radio" name="payment" id="once" value="once" checked>
                             <label for="once">Once</label>
                         </div>
                     </form>
