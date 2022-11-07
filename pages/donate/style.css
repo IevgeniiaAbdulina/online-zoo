@@ -158,7 +158,7 @@ img.animals-widget {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .feed-range-container p:nth-child(1) {
@@ -189,53 +189,7 @@ img.animals-widget {
     align-items: center;
 }
 
-ul.feed-range-dot-container {
-    width: 950px;
-    height: 20px;
-    list-style: none;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.yellow-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #FFEE2E;
-}
-
-.feed-range-dot:hover .yellow-dot {
-    background: #FE9013;
-}
-
-.feed-range-dot {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.active-dot {
-    background: center / contain no-repeat url(../../assets/icons/roller_icon.svg);
-}
-/*-------------------------------------------------*/
-
-/*-------------------------------------------------*/
-/* Feed Range Values */
-.feed-range-values {
-    width: 98%;
-    height: 36px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.range-value {
+.range-control {
     font-family: var(--font-family-base);
     font-style: normal;
     font-weight: 500;
@@ -244,19 +198,117 @@ ul.feed-range-dot-container {
     text-transform: uppercase;
     color: #333B41;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 70px;
+    height: 72px;
+    cursor: pointer;
 }
 
-.range-value img {
+.range-control:focus-within {
+    color: var(--orange);
+}
+
+.feed-range-dot {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+ul.feed-range-dot-container {
+    width: 950px;
+    height: 20px;
+    list-style: none;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+input[type=radio] {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    place-content: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=radio][name=range] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: currentColor;
+    cursor: pointer;
+}
+
+input[type=radio][name=range]::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #FFEE2E;
+}
+
+input[name=range][name=range]::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: scale(0);
+    border: 2px solid var(--orange);
+    outline: 2px solid var(--orange);
+    outline-offset: 10px;
+    transition: 120ms transform ease-in-out;
+}
+
+.range-dollar-ic {
     width: 10px;
     height: 20px;
     margin-right: 2px;
+    margin-bottom: 2px;
+    background: center / contain no-repeat url(../../assets/icons/dollar-ic.svg);
 }
 
-p.active {
-    color: #FE9013;
+.range-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type=radio][name=range]:checked::before {
+    transform: scale(1);
+}
+
+input[type="radio"][name=range]:checked + label {
+    color: var(--orange);
+}
+
+input[type="radio"][name=range]:checked + label div:nth-child(1) {
+    background: center / contain no-repeat url(../../assets/icons/dollar-ic-orange.svg);
+}
+
+input[type=radio][name=range]:hover::after{
+    background: var(--orange);
+}
+
+input[type="radio"][name=range]:hover + label {
+    color: var(--orange);
+}
+
+input[type="radio"][name=range]:hover + label div:nth-child(1) {
+    background: center / contain no-repeat url(../../assets/icons/dollar-ic-orange.svg);
 }
 /*-------------------------------------------------*/
 
@@ -320,14 +372,11 @@ input[type=number].another-amount-input:focus  {
     align-items: center;
 }
 
-input[type=radio] {
+input[type=radio][name=payment] {
     margin-right: 10px;
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
-
-    -webkit-appearance: none;
-    appearance: none;
     background-color: transparent;
     width: 16px;
     height: 16px;
@@ -336,11 +385,11 @@ input[type=radio] {
     background: transparent
 }
 
-input[type=radio]:hover {
+input[type=radio][name=payment]:hover {
     border: 1px solid #4B9200;
 }
 
-input[type=radio]:checked {
+input[type=radio][name=payment]:checked {
     background: #4B9200;
     border: 1px solid #4B9200;
 }
