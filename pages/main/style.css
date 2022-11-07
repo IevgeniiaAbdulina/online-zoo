@@ -557,7 +557,6 @@ div.pets.block {
 
 .pick-and-feed .container {
     background: var(--frosted_glass_white);
-    backdrop-filter: blur(2px);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
