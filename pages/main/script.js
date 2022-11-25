@@ -42,4 +42,34 @@ input.addEventListener("input", event =>{
 
 input.addEventListener("focusout", event => {
     buttonSubmit.classList.remove("invalid");
-})
+});
+
+// Mobile Navigation Menu
+function showTopNav() {
+    let menu = document.getElementById('menu-links');
+    let header = document.getElementById('header');
+    let logo = document.getElementById('top-logo');
+    let logoText = document.getElementById('top-petstory');
+    let menuIcon = document.getElementById('top-icon-menu');
+    if(menu.style.display === 'block') {
+        menu.style.display = 'none';
+        header.style.backgroundColor = '#000000';
+        logo.style.borderColor = 'white';
+        logo.style.width = '55px';
+        logo.style.height = '30px';
+        logoText.style.color = 'white';
+        logoText.style.fontSize = '0.750em';
+        menuIcon.style.color = '#FFFFFF';
+    } else {
+        menu.style.display = 'block';
+        header.style.backgroundColor = '#FFFFFF';
+        logo.style.borderColor = 'var(--orange)';
+        logo.style.width = '77px';
+        logo.style.height = '43px';
+        logoText.style.color = 'var(--orange)';
+        logoText.style.fontSize = '1rem';
+        logoText.style.lineHeight = '0.75rem';
+        menuIcon.style.color = '#000000';
+        
+    }
+}
