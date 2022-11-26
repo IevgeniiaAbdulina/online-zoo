@@ -21,16 +21,17 @@ and (max-width: 640px) {
     .design-author {
         display: none;
     }
-    header .logo {
+    header .sm-logo {
         width: 55px;
         height: 30px;
+        border: none;
         margin-right: 0;
         align-self: flex-start;
     }
     header .logo .petstory {
         font-weight: 400;
         font-size: 0.750em;
-        line-height: 1em;
+        line-height: 0.125em;
     }
     header .logo .petstory::after {
         width: 4px;

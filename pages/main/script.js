@@ -48,28 +48,25 @@ input.addEventListener("focusout", event => {
 function showTopNav() {
     let menu = document.getElementById('menu-links');
     let header = document.getElementById('header');
+    let topMenuWrap = document.getElementById('top-nav');
     let logo = document.getElementById('top-logo');
     let logoText = document.getElementById('top-petstory');
     let menuIcon = document.getElementById('top-icon-menu');
     if(menu.style.display === 'block') {
         menu.style.display = 'none';
-        header.style.backgroundColor = '#000000';
-        logo.style.borderColor = 'white';
-        logo.style.width = '55px';
-        logo.style.height = '30px';
-        logoText.style.color = 'white';
-        logoText.style.fontSize = '0.750em';
+        header.classList.remove('menu-isopened');
+        topMenuWrap.classList.remove('menu-isopened-wrap');
+        logo.classList.remove('m-logo');
+        logo.classList.add('sm-logo');
+        logoText.classList.remove('m-logo-tx');
         menuIcon.style.color = '#FFFFFF';
     } else {
         menu.style.display = 'block';
-        header.style.backgroundColor = '#FFFFFF';
-        logo.style.borderColor = 'var(--orange)';
-        logo.style.width = '77px';
-        logo.style.height = '43px';
-        logoText.style.color = 'var(--orange)';
-        logoText.style.fontSize = '1rem';
-        logoText.style.lineHeight = '0.75rem';
+        header.classList.add('menu-isopened');
+        topMenuWrap.classList.add('menu-isopened-wrap');
+        logo.classList.remove('sm-logo');
+        logo.classList.add('m-logo');
+        logoText.classList.add('m-logo-tx');
         menuIcon.style.color = '#000000';
-        
     }
 }

@@ -12,10 +12,6 @@
         #top-icon-menu {
             display: none;
         }
-        .container,
-        .pick-and-feed {
-            padding: 0 1.875rem;
-        }
         /*--------------------------------------------*/
         /*------------ Banner block ---------------*/
         .banner-content {
@@ -38,6 +34,12 @@
             font-size: 5.125em;
         }
         /*--------------------------------------------*/
+        .backstage .container,
+        .pets .container,
+        .testimonials .container,
+        footer .container {
+            padding: 0 1.875rem;
+        }
         /*------------ Backstage block ---------------*/
         .backstage.block {
             margin-top: 100px;
@@ -65,10 +67,10 @@
 
         }
         .arrow_elips:nth-child(1) {
-            margin-left: calc(100%/2 - 8.75em);
+            margin-left: calc(100%/2 - 8em);
         }
         .arrow_elips {
-            margin-right: calc(100%/2 - 8.75em);
+            margin-right: calc(100%/2 - 8em);
         }
         .pets-decoration.right {
             max-width: 11.250em;
@@ -84,6 +86,22 @@
             margin-top: 0;
         }
         /*--------------------------------------------*/
+        /*------------ Pick-and-Feed Block -----------*/
+        .pick-and-feed.block {
+            padding: 30px 1.875rem 50px;
+        }
+        .pick-and-feed .container {
+            padding: 30px 30px 50px;
+        }
+        .how-it-works .wrapper {
+            padding: 0;
+            justify-content: center;
+        }
+        .arrow-right {
+            margin-left: 1.875em;
+            margin-right: 1.875em;
+        }
+        *--------------------------------------------*/
         /* --- Testimonials block --- */
         .text-block-wrapper {
             overflow-y: hidden;
@@ -99,6 +117,10 @@
             min-width: calc(100%/3 - 0.65em*2);
         }
         /*------------ Footer block ---------------*/
+        footer .container {
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
         footer #sm-social-media{
             display: none;
         }
