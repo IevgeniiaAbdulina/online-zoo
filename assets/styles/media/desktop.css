@@ -1,0 +1,28 @@
+/* -------------- Desktop Screens -------------- */
+@media screen
+and (min-width: 1000px)
+and (max-width: 1280px) {
+    body {
+        border:#4B9200 solid;
+        min-width: 100vw;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        padding: 0.875rem 1.875rem;
+    }
+    #menu-links {
+        display: none;
+    }
+    #top-icon-menu {
+        display: none;
+    }
+
+    .card-grid {
+        gap: 1.250em 1.750em;
+    }
+
+}
+/*-------------------------------------------------*/

@@ -1,0 +1,47 @@
+/*------------------ Typography ------------------*/
+h1 {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 114px;
+    line-height: 80%;
+    text-transform: uppercase;
+    color: var(--black_blue);
+}
+
+h2 {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: var(--black_blue);
+}
+
+h3 {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: var(--black_blue);
+}
+
+.subtitle {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--black_blue);
+}
+
+.sm-paragraph {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #000000;
+}
+/*-------------------------------------------------*/

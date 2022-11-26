@@ -1,0 +1,122 @@
+/*------------------ Testimonials block ---------------------*/
+.testimonials.block {
+    margin-top: 140px;
+    margin-bottom: 180px;
+}
+
+.testimonials h3 {
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.text-block-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-block {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.text-block-box {
+    width: calc((100% / 4) - 15px);
+    height: 390px;
+    padding: 16px 16px 20px;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background:  var(--gray_light);
+    background-clip: border-box;
+}
+
+.text-block-box::after {
+    position: absolute;
+    content: "";
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border-radius: 22px;
+    background: var(--pink_gradient);
+    z-index: -1;
+}
+
+.text-block-box .box-body p {
+    width: 100%;
+    height: 290px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gray);
+}
+
+.box-header .user-icon.user-one {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user_icon.png);
+}
+
+.box-header .user-icon.user-two {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user2.png);
+}
+
+.box-header .user-icon.user-three {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user3.png);
+}
+
+.box-header .user-icon.user-four {
+    width: 37px;
+    height: 37px;
+    background: no-repeat center/100% url(../../assets/icons/user4.png);
+}
+
+.user-icon {
+    margin-right: 10px;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+
+    color: #000000;
+}
+
+.personal-info .row {
+    display: flex;
+    color: #BDBDBD;
+}
+
+.row .location {
+    margin-right: 16px;
+}
+
+.testimonials button {
+    border: none;
+    align-self: flex-start;
+}
+
+.testimonials-decoration {
+    position: absolute;
+    right: 0;
+    margin-top: -100px;
+    z-index: -1;
+}
+/* ---------------------------------------------- */

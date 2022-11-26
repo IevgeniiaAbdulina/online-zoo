@@ -1,0 +1,129 @@
+/*------------------ Footer -----------------------*/
+footer {
+    background-color: #111115;
+}
+
+footer .container {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.subscribe-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.subscribe label {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--white);
+}
+
+.input-wrapper {
+    margin-top: 14px;
+}
+
+.subscribe input[type="email"] {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid var(--orange);
+    border-radius: 2px;
+    background: #111115;
+    margin-right: 10px;
+    color: #FFFFFF;
+}
+
+input[type="submit"] {
+    box-sizing: border-box;
+    background: var(--gray_light);
+    color: #000000;
+    padding: 10px 40px;
+    border: 1px solid var(--black_blue);
+    border-radius: 5px;
+}
+
+input[type="submit"].invalid {
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+input[type="submit"]:hover {
+    background: var(--gray_smoky);
+
+}
+
+input[type="email"]:hover {
+    border: 1px solid var(--green);
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border: 1px solid var(--red);
+}
+
+input[type="email"]:valid {
+    border: 1px solid var(--green);
+}
+
+.subscribe-wrapper {
+    margin-bottom: 44px;
+}
+
+.links-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+nav.social-media-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav.social-media-links ul > li  {
+    margin-top: 10px;
+}
+
+.social-media-links a {
+    display: flex;
+    align-items: center;
+}
+
+.social-media-links img {
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.5);;
+}
+
+.social-media-links li:hover a {
+    color: var(--green);
+}
+
+.social-media-links li:hover img {
+    background-color: var(--green);
+}
+
+.attribution p {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.attribution p:hover {
+    color: var(--green);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.attribution p:nth-child(1) {
+    margin-bottom: 10px;
+}
+/*-------------------------------------------------*/
