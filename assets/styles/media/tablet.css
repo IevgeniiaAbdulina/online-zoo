@@ -4,49 +4,68 @@ and (min-width: 320px)
 and (max-width: 640px) {
     /*------------ Header block ---------------*/
     header {
-        padding: 10px 0;
+        padding: 0.625rem 0;
         position: fixed;
         top: 0;
-        width: 100%;
-        height: auto;
+        width: 100vw;
+        height: 34px;
+        display: flex;
+        align-items: center;
         z-index: 10;
     }
     header .container {
-        padding: 0 20px;
-    }
-    header .navigation-wrapper {
-        flex-direction: column;
+        width: 100vw;
+        padding: 0 0.625rem;
     }
     .navigation-bar,
     .design-author {
         display: none;
     }
+    #top-icon-menu {
+        display: block;
+    }
+    header .logo {
+        max-width: fit-content;
+        max-height: inherit;
+    }
     header .sm-logo {
-        width: 55px;
-        height: 30px;
+        transform: scale(0.575) translateX(-30px);
         border: none;
         margin-right: 0;
-        align-self: flex-start;
     }
-    header .logo .petstory {
-        font-weight: 400;
-        font-size: 0.750em;
-        line-height: 0.125em;
+    /* when the Humburger menu is opened: */
+    header .navigation-wrapper.menu-isopened-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch
     }
-    header .logo .petstory::after {
-        width: 4px;
-        height: 12px;
-        top: -20px;
-        right: 20px;
-        display: inline;
+    header.menu-isopened {
+        background-color: #FFFFFF;
+        height: auto;
+    }
+    header #top-logo.m-logo {
+        width: 67px;
+        height: 41.6px;
+        margin: 0;
+        border: 1px solid var(--orange);
+    }
+    header #top-petstory.m-logo-tx {
+        color: var(--orange);
+        font-size: 1em;
+        line-height: 0.75em;
+    }
+    header #top-petstory.m-logo-tx::after {
+        content: url(../../icons/bamboo-orange.svg);
+        position: relative;
+        width: 7px;
+        height: 20px;
+        right: 46px;
     }
     /*--------------------------------------------*/
     /*------------ Humburger Menu ---------------*/
     .topnav {
         width: 100%;
-        height: auto;
         overflow: hidden;
-        /* background-color: #111115; */
         position: relative;
     }
     .topnav #menu-links {
@@ -55,7 +74,7 @@ and (max-width: 640px) {
     .topnav #menu-links {
         width: 100%;
         list-style: none;
-        color: black;
+        color: #000000;
         margin-top: 30px;
     }
     .topnav a.topnav-link {
@@ -68,7 +87,7 @@ and (max-width: 640px) {
         display: block;
         position: absolute;
         right: 0;
-        margin: 4px 0;
+        margin: 0;
         color: white;
         font-size: 18px;
     }
@@ -77,28 +96,41 @@ and (max-width: 640px) {
         font-weight: 700;
     }
     /*--------------------------------------------*/
+    .backstage .container,
+    .pets .container,
+    .testimonials .container,
+    footer .container {
+        padding: 0 1.250rem;
+    }
     /*------------ Banner Block ---------------*/
+
     .banner-content {
         width: 100%;
+        padding: 0 1.250rem;
+        margin-top: 2.125em;
         align-content: space-between;
         justify-content: center;
     }
     .banner-content::after {
         width: 237px;
         height: 237px;
-        bottom: 266px;
-        left: 115px;
+        top: 15px;
+        left: 322px;
     }
     h2.banner-title {
-        max-width: 320px;
+        width: 258px;
+        height: auto;
         font-size: 3.375em;
         align-self: flex-end;
-        margin-bottom: 80px;
+        margin-top: 40px;
+        margin-bottom: 0;
+        z-index: 1;
     }
-    .banner-content  a {
+    .banner-content a {
         align-self: flex-start;
-        margin-top: -94px;
-        margin-left: 20px;
+    }
+    .banner-content button {
+        border: none;
     }
     .banner img {
         width: 100%;
@@ -113,7 +145,7 @@ and (max-width: 640px) {
         display: none;
     }
     .backstage-decoration {
-        transform: translateX(20%);
+        transform: translateX(20%) scale(0.78);
         z-index: -1;
     }
     .backstage .container {
@@ -121,6 +153,9 @@ and (max-width: 640px) {
     }
     .backstage-content {
         width: 80%;
+    }
+    .backstage-text {
+        max-width: 100%;
     }
     /*--------------------------------------------*/
     /*---------------- Pets Block ----------------*/
@@ -151,7 +186,8 @@ and (max-width: 640px) {
         position: relative;
         max-height: 12.5em;
         align-self: flex-start;
-        margin-top: 0;
+        margin-top: -60px;
+
     }
     .pets-decoration.right {
         max-width: 11.25em;
@@ -184,7 +220,7 @@ and (max-width: 640px) {
         margin-top: -46px;
         z-index: 2;
         margin-bottom: 0;
-        background: no-repeat center/100% url(../../assets/icons/arrow-green.svg);
+        background: no-repeat center/100% url(../../icons/arrow-green.svg);
     }
     .wrapper .arrow-right:nth-child(2) {
         margin-left: calc(100%/3  + 145px);

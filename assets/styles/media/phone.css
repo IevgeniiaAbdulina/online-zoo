@@ -96,20 +96,29 @@ and (max-width: 320px) {
     .banner-content {
         width: 100%;
         padding:  0 0.625rem;
-        margin-top: 2.5em;
+        /* margin-top: 2.5em; */
+        margin-top: 0;
         display: flex;
         align-items: center;
     }
     .banner-content::after {
-        transform: scale(0.26);
+        /* transform: scale(0.26);
         bottom: 415px;
+        left: 32px; */
+        width: 120px;
+        height: 120px;
         left: 32px;
+        top: -244px;
+        left: 59px;
+        right: 0;
+        bottom: 0px;
     }
     h2.banner-title {
-        max-width: 6em;
+        max-width: 130px;
         font-size: 1.75em;
         line-height: 75%;
         align-self: flex-end;
+        margin-bottom: 64px;
     }
     .banner-content .btn {
         max-width: calc(100vw - 1.25em);
@@ -133,9 +142,9 @@ and (max-width: 320px) {
         display: none;
     }
     .backstage-decoration {
-        transform: scale(0.36);
-        right: -108px;
-        top: 204px;
+        transform: scale(0.36) translate(280px, -280px);
+        /* right: -108px;
+        top: 204px; */
         z-index: -1;
     }
     .backstage .container {
@@ -163,13 +172,14 @@ and (max-width: 320px) {
         margin-bottom: 1.25em;
     }
     .card-grid {
-        max-height: 1400px;
+        max-height: 1490px;
         padding: 4px;
         row-gap: 1.25em;
         overflow: hidden;
     }
     .card {
         flex: 1;
+        max-width: 100%;
     }
     .arrows {
         display: none;
@@ -188,7 +198,7 @@ and (max-width: 320px) {
         margin-top: -4em;
     }
     .pets .btn {
-        max-width: calc(100vw - 1.25em);
+        max-width: calc(100vw - 1.25rem);
     }
     /*--------------------------------------------*/
     /*------------ Pick-and-Feed Block -----------*/
@@ -201,24 +211,26 @@ and (max-width: 320px) {
 
     .pick-and-feed h2 {
         font-size: 1.5em;
+        margin-bottom: 10px;
     }
     .pick-and-feed .content p:nth-child(2) {
         text-align: center;
-        font-size: 1.125em;
+        font-size: 1.125rem;
+        margin-bottom: 0;
     }
     .pick-and-feed .content p:nth-child(3),
     .pick-and-feed .content p:nth-child(4) {
         display: none;
     }
     .how-it-works h3 {
-        margin: 1.25em 0;
-        font-size: 1.5em;
+        margin: 20px 0;
+        font-size: 1.5rem;
     }
     .how-it-works figure {
         align-self: center;
     }
     .how-it-works figcaption {
-        padding: 0.625em 0 2.5em;
+        padding: 0.625rem 0 2.5rem;
     }
     .how-it-works .wrapper {
         max-width: 100%;
@@ -237,16 +249,16 @@ and (max-width: 320px) {
     }
     .wrapper .arrow-right:nth-child(2) {
         transform: rotate(90deg);
-        margin-left: calc(100% - 80px);
+        margin-left: calc(100% - 115px);
         margin-top: 10em;
     }
     .wrapper .arrow-right:nth-child(4) {
         transform: rotate(90deg);
-        margin-left: calc(100% - 80px);
+        margin-left: calc(100% - 115px);
         margin-top: 26.25em;
     }
     .how-it-works .btn {
-        max-width: calc(100vw - 1.25em);
+        max-width: calc(100vw - 1.25rem);
     }
     /*--------------------------------------------*/
     /*------------ Testimonials Block ------------*/
@@ -314,7 +326,7 @@ and (max-width: 320px) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1.875em;
+        margin-bottom: 30px;
     }
     footer .logo {
         width: 100%;
@@ -326,12 +338,19 @@ and (max-width: 320px) {
         display: flex;
         align-items: center;
         order: 1;
+        margin-bottom: 0;
     }
     .subscribe-wrapper #sm-social-media {
         position: relative;
         min-width: 80%;
-        margin: 1.875em 0;
+        margin: 30px 0;
+        justify-content: center;
+        align-items: center;
         order: 2;
+        right: 0;
+    }
+    .social-media-links {
+        width: 100%;
     }
     .subscribe-wrapper a {
         order: 3;
@@ -369,6 +388,7 @@ and (max-width: 320px) {
         order: 2;
     }
     footer .links-wrapper .attribution {
+        width: 100%;
         align-self: flex-end;
         order: 1;
         margin-bottom: 1.875em;

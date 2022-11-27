@@ -1,4 +1,5 @@
 /* -------------- Tablet Landscape Screens -------------- */
+/* === Main Page === */
 @media screen
     and (min-width: 640px)
     and (max-width: 1000px) {
@@ -6,10 +7,10 @@
         header {
             padding: 0.875rem 1.875rem;
         }
-        #menu-links {
+        header #menu-links {
             display: none;
         }
-        #top-icon-menu {
+        header #top-icon-menu {
             display: none;
         }
         /*--------------------------------------------*/
@@ -51,7 +52,10 @@
             gap: 1.875em;
         }
         .backstage-decoration {
-            display: none;
+           transform: translate(150%);
+        }
+        .backstage-text {
+            max-width: 50%;
         }
         /*--------------------------------------------*/
         /*-------------- Pets block ---------------*/
@@ -83,12 +87,12 @@
             position: relative;
             max-height: 12.5em;
             align-self: flex-start;
-            margin-top: 0;
+            margin-top: -60px;
         }
         /*--------------------------------------------*/
         /*------------ Pick-and-Feed Block -----------*/
         .pick-and-feed.block {
-            padding: 30px 1.875rem 50px;
+            padding: 1.875em 1.875rem 3.125em;
         }
         .pick-and-feed .container {
             padding: 30px 30px 50px;
@@ -101,7 +105,7 @@
             margin-left: 1.875em;
             margin-right: 1.875em;
         }
-        *--------------------------------------------*/
+        /*--------------------------------------------*/
         /* --- Testimonials block --- */
         .text-block-wrapper {
             overflow-y: hidden;
@@ -116,6 +120,9 @@
         .text-block-box {
             min-width: calc(100%/3 - 0.65em*2);
         }
+        .testimonials input[type=range] {
+            max-width: 390px;
+        }
         /*------------ Footer block ---------------*/
         footer .container {
             padding-top: 40px;
@@ -123,6 +130,12 @@
         }
         footer #sm-social-media{
             display: none;
+        }
+        footer .input-wrapper {
+            margin-top: 0;
+        }
+        footer input[type=email] {
+            margin-top: 15px;
         }
         /*--------------------------------------------*/
 }
