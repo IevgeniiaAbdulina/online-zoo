@@ -348,6 +348,13 @@ and (max-width: 640px) {
     section.feed .feed-text {
         margin-bottom: 30px;
     }
+    section.feed .feed-count-content {
+        max-width: 40%;
+    }
+    section.feed img.animals-widget {
+        max-width: 50%;
+        height: auto;
+    }
     section.feed .feed-donation-info {
         padding: 30px 0 30px;
     }

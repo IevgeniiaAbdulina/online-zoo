@@ -70,3 +70,12 @@ function showTopNav() {
         menuIcon.style.color = '#000000';
     }
 }
+
+// Show Modal Testimonials Pop-Up:
+function showModal() {
+    document.getElementById('modal-overlay').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modal-overlay').style.display = 'none';
+}

@@ -33,6 +33,7 @@
     border-radius: 20px;
     background:  var(--gray_light);
     background-clip: border-box;
+    cursor: pointer;
 }
 
 .text-block-box::after {
