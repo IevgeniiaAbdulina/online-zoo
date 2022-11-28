@@ -1,4 +1,5 @@
 /* -------------- Phone Screens -------------- */
+/* === Main Page === */
 @media screen
 and (max-width: 320px) {
     /*------------ Header block ---------------*/
@@ -407,4 +408,76 @@ and (max-width: 320px) {
         margin: 0;
     }
     /*--------------------------------------------*/
+}
+
+/* === Donate Page === */
+@media screen
+and (max-width: 320px) {
+    section.feed .container {
+        padding: 0 0.625rem;
+    }
+    section.feed .feed-text h3:nth-child(3) {
+        font-size: 24px;
+        line-height: 120%;
+    }
+    section.feed .feed-donation-info {
+        padding: 20px 0 20px;
+        margin-bottom: 20px;
+    }
+    section.feed .feed-donation-info h2 {
+        font-size: 24px;
+    }
+    section.feed .feed-donation-info .subtitle {
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+    }
+    section.feed .feed-count-wrap {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+    section.feed .feed-count-content {
+        max-width: 40%;
+    }
+    section.feed img.animals-widget {
+        max-width: 50%;
+        height: auto;
+    }
+    section.feed .ic-wrap {
+        max-width: 10%;
+        transform: scale(55%);
+        margin-right: 30px;
+    }
+    .feed .feed-count-content div:nth-child(1) {
+        font-size: 40px;
+    }
+    .feed .feed-count-content p:nth-child(2) {
+        font-size: 9px;
+        text-align: center;
+    }
+    section.feed .feed-range-container {
+        width: calc(100vw - (0.625rem*2));
+        margin-bottom: 45px;
+    }
+    .feed .feed-range-container p:nth-child(1) {
+        margin-left: 0;
+    }
+    form.feed-range .feed-range-line {
+        max-width: calc(100% - 20px*2);
+    }
+    form.feed-range ul.feed-range-dot-container {
+        max-width: calc(100% - (10px*2));
+    }
+    .feed .feed-range .range-control {
+        font-size: 13px;
+        height: 55px;
+    }
+    .feed .range-dollar-ic {
+        width: 5px;
+        height: 10px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+    }
 }
