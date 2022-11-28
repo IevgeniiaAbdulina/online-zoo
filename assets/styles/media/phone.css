@@ -1,0 +1,483 @@
+/* -------------- Phone Screens -------------- */
+/* === Main Page === */
+@media screen
+and (max-width: 320px) {
+    /*------------ Header block ---------------*/
+    header {
+        padding: 0.625rem 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 34px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+    }
+    header .container {
+        width: 100vw;
+        padding: 0 0.625rem;
+    }
+    .navigation-bar,
+    .design-author {
+        display: none;
+    }
+    header .logo {
+        max-width: fit-content;
+        max-height: inherit;
+    }
+    header .sm-logo {
+        transform: scale(0.575) translateX(-30px);
+        border: none;
+        margin-right: 0;
+    }
+    /* when the Humburger menu is opened: */
+    header .navigation-wrapper.menu-isopened-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch
+    }
+    header.menu-isopened {
+        background-color: #FFFFFF;
+        height: auto;
+    }
+    header #top-logo.m-logo {
+        width: 67px;
+        height: 41.6px;
+        margin: 0;
+        border: 1px solid var(--orange);
+    }
+    header #top-petstory.m-logo-tx {
+        color: var(--orange);
+        font-size: 1em;
+        line-height: 0.75em;
+    }
+    header #top-petstory.m-logo-tx::after {
+        content: url(../../icons/bamboo-orange.svg);
+        position: relative;
+        width: 7px;
+        height: 20px;
+        right: 46px;
+    }
+    /*--------------------------------------------*/
+    /*------------ Humburger Menu ---------------*/
+    .topnav {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .topnav #menu-links {
+        display: none;
+    }
+    .topnav #menu-links {
+        width: 100%;
+        list-style: none;
+        color: black;
+        margin-top: 30px;
+    }
+    .topnav a.topnav-link {
+        padding: 15px 0;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    .topnav a.icon-menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin: 0;
+        color: white;
+        font-size: 18px;
+    }
+    .topnav a.topnav-link:hover + li.nav-link.current{
+        color: var(--orange);
+        font-weight: 700;
+    }
+    /*--------------------------------------------*/
+    /*------------ Banner Block ---------------*/
+    .banner-content {
+        width: 100%;
+        padding:  0 0.625rem;
+        /* margin-top: 2.5em; */
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+    }
+    .banner-content::after {
+        /* transform: scale(0.26);
+        bottom: 415px;
+        left: 32px; */
+        width: 120px;
+        height: 120px;
+        left: 32px;
+        top: -244px;
+        left: 59px;
+        right: 0;
+        bottom: 0px;
+    }
+    h2.banner-title {
+        max-width: 130px;
+        font-size: 1.75em;
+        line-height: 75%;
+        align-self: flex-end;
+        margin-bottom: 64px;
+    }
+    .banner-content .btn {
+        max-width: calc(100vw - 1.25em);
+        border: none;
+    }
+    .banner.block {
+        margin-top: 34px;
+    }
+    .banner img {
+        width: 100%;
+        height: 11.6875em;
+        top: 34px;
+    }
+    /*--------------------------------------------*/
+    /*------------ Backstage Block ---------------*/
+    .backstage.block {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+    .backstage-content img {
+        display: none;
+    }
+    .backstage-decoration {
+        transform: scale(0.36) translate(280px, -280px);
+        /* right: -108px;
+        top: 204px; */
+        z-index: -1;
+    }
+    .backstage .container {
+        padding: 0 0.625rem;
+    }
+    .backstage-content {
+        flex: 100%;
+        gap: 0;
+    }
+    .backstage-text h2 {
+        font-size: 1.5em;
+    }
+    .backstage-text .subtitle {
+        margin-top: 1.25em;
+        margin-bottom: 0.625em;
+    }
+    /*--------------------------------------------*/
+    /*---------------- Pets Block ----------------*/
+    div.pets.block {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .pets .container {
+        padding: 0 0.625rem;
+        margin-bottom: 1.25em;
+    }
+    .card-grid {
+        max-height: 1490px;
+        padding: 4px;
+        row-gap: 1.25em;
+        overflow: hidden;
+    }
+    .card {
+        flex: 1;
+        max-width: 100%;
+    }
+    .arrows {
+        display: none;
+    }
+    .pets-decoration.left {
+        position: relative;
+        max-height: 72px;
+        align-self: flex-start;
+        margin-top: 0;
+    }
+    .pets-decoration.right {
+        max-width: 85px;
+        max-height: 72px;
+        position: relative;
+        align-self: flex-end;
+        margin-top: -4em;
+    }
+    .pets .btn {
+        max-width: calc(100vw - 1.25rem);
+    }
+    /*--------------------------------------------*/
+    /*------------ Pick-and-Feed Block -----------*/
+    .pick-and-feed.block {
+        padding: 1.250em 0.625em;
+    }
+    .pick-and-feed .container {
+        padding: 1.250em 0 2.5em;
+    }
+
+    .pick-and-feed h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .pick-and-feed .content p:nth-child(2) {
+        text-align: center;
+        font-size: 1.125rem;
+        margin-bottom: 0;
+    }
+    .pick-and-feed .content p:nth-child(3),
+    .pick-and-feed .content p:nth-child(4) {
+        display: none;
+    }
+    .how-it-works h3 {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+    .how-it-works figure {
+        align-self: center;
+    }
+    .how-it-works figcaption {
+        padding: 0.625rem 0 2.5rem;
+    }
+    .how-it-works .wrapper {
+        max-width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .arrow-right {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        z-index: 2;
+        margin-bottom: 0;
+        background: no-repeat center/100% url(../../icons/arrow-green.svg);
+    }
+    .wrapper .arrow-right:nth-child(2) {
+        transform: rotate(90deg);
+        margin-left: calc(100% - 115px);
+        margin-top: 10em;
+    }
+    .wrapper .arrow-right:nth-child(4) {
+        transform: rotate(90deg);
+        margin-left: calc(100% - 115px);
+        margin-top: 26.25em;
+    }
+    .how-it-works .btn {
+        max-width: calc(100vw - 1.25rem);
+    }
+    /*--------------------------------------------*/
+    /*------------ Testimonials Block ------------*/
+    .testimonials.block {
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    .testimonials .container {
+        padding: 0 1.250em;
+    }
+    .testimonials h3 {
+        margin-bottom: 30px;
+    }
+    .text-block-box {
+        min-width: 100%;
+        max-height: 110px;
+        padding: 0.625em;
+    }
+    .text-block-box .row p {
+        font-size: 0.9375em;
+    }
+
+
+    .text-block-box .box-body {
+        width: 100%;
+        height: 34px;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .text-block-box .box-body p {
+        font-size: 15px;
+        line-height: 120%;
+    }
+    .text-block {
+        max-height: 370px;
+        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 4px;
+    }
+    input[type=range] {
+        display: none;
+    }
+    .text-block-wrapper button {
+        margin-top: 1.875em;
+        align-self: center;
+        max-width: calc(100vw - 5em);
+    }
+    .testimonials-decoration {
+        transform: scale(0.3);
+        right: -87px;
+        margin-top: -147px;
+    }
+    /*--------------------------------------------*/
+     /*-------------- Footer Block ---------------*/
+     #contact .container {
+        padding: 1.25rem 0.625rem;
+    }
+    footer form.subscribe {
+        display: none;
+    }
+    footer .subscribe-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    footer .logo {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        border: none;
+    }
+    .subscribe-wrapper .subscribe-row {
+        display: flex;
+        align-items: center;
+        order: 1;
+        margin-bottom: 0;
+    }
+    .subscribe-wrapper #sm-social-media {
+        position: relative;
+        min-width: 80%;
+        margin: 30px 0;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+        right: 0;
+    }
+    .social-media-links {
+        width: 100%;
+    }
+    .subscribe-wrapper a {
+        order: 3;
+    }
+    footer nav.social-media-links ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    footer #sm-social-media li {
+        display: flex;
+        justify-content: center;
+        flex: 25%;
+        margin: 0;
+    }
+    footer #sm-social-media a,
+    footer #sm-social-media a img {
+        margin-right: 0;
+    }
+    footer .subscribe-wrapper .btn {
+        border: none;
+        max-width: calc(100vw - 0.625em);
+    }
+    footer #lg-social-media {
+        display: none;
+    }
+    footer .links-wrapper {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .links-wrapper .nav-bar {
+        min-width: 100%;
+        order: 2;
+    }
+    footer .links-wrapper .attribution {
+        width: 100%;
+        align-self: flex-end;
+        order: 1;
+        margin-bottom: 1.875em;
+    }
+    footer .links-wrapper .attribution p {
+        font-size: 0.875em;
+        margin: 0;
+    }
+    footer .nav-bar li {
+        display: flex;
+        justify-content: center;
+        flex: 25%;
+    }
+    footer .nav-bar a {
+        font-size: 0.875em;
+        margin: 0;
+    }
+    /*--------------------------------------------*/
+}
+
+/* === Donate Page === */
+@media screen
+and (max-width: 320px) {
+    section.feed .container {
+        padding: 0 0.625rem;
+    }
+    section.feed .feed-text h3:nth-child(3) {
+        font-size: 24px;
+        line-height: 120%;
+    }
+    section.feed .feed-donation-info {
+        padding: 20px 0 20px;
+        margin-bottom: 20px;
+    }
+    section.feed .feed-donation-info h2 {
+        font-size: 24px;
+    }
+    section.feed .feed-donation-info .subtitle {
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+    }
+    section.feed .feed-count-wrap {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+    section.feed .feed-count-content {
+        max-width: 40%;
+    }
+    section.feed img.animals-widget {
+        max-width: 50%;
+        height: auto;
+    }
+    section.feed .ic-wrap {
+        max-width: 10%;
+        transform: scale(55%);
+        margin-right: 30px;
+    }
+    .feed .feed-count-content div:nth-child(1) {
+        font-size: 40px;
+    }
+    .feed .feed-count-content p:nth-child(2) {
+        font-size: 9px;
+        text-align: center;
+    }
+    section.feed .feed-range-container {
+        width: calc(100vw - (0.625rem*2));
+        margin-bottom: 45px;
+    }
+    .feed .feed-range-container p:nth-child(1) {
+        margin-left: 0;
+    }
+    form.feed-range .feed-range-line {
+        max-width: calc(100% - 20px*2);
+    }
+    form.feed-range ul.feed-range-dot-container {
+        max-width: calc(100% - (10px*2));
+    }
+    .feed .feed-range .range-control {
+        font-size: 13px;
+        height: 55px;
+    }
+    .feed .range-dollar-ic {
+        width: 5px;
+        height: 10px;
+        margin-right: 1px;
+        margin-bottom: 1px;
+    }
+}

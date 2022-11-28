@@ -1,0 +1,109 @@
+/*---------------- Pick and Feed block ---------------------*/
+.pick-and-feed.block {
+    width: 100%;
+    height: auto;
+    background: var(--orange_gradient);
+    padding-top: 69px;
+    padding-bottom: 100px;
+}
+
+.pick-and-feed .container {
+    background: var(--frosted_glass_white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 100px 60px 100px;
+}
+
+.pick-and-feed h2 {
+    text-align: center;
+    color: var(--orange);
+    margin-bottom: 30px;
+}
+
+.pick-and-feed p {
+    color: var(--black_blue);
+}
+
+.pick-and-feed .content p:nth-child(1) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.pick-and-feed .content p:nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 40px;
+}
+
+.pick-and-feed .content p:nth-child(3) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+
+.pick-and-feed .content p:nth-child(4) a {
+    text-decoration-color: var(--orange);
+}
+
+.how-it-works {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-it-works h3 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.how-it-works .wrapper {
+    width: 100%;
+    padding: 0 99px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 60px;
+}
+
+.how-it-works figure {
+    align-self: flex-start;
+}
+
+.how-it-works figcaption {
+    max-width: 168px;
+    padding: 30px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black_blue);
+}
+
+.how-it-works figure img {
+    width: 168px;
+    height: 168px;
+    object-fit: contain;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--orange);
+}
+
+.arrow-right {
+    width: 69px;
+    height: 35px;
+    margin-bottom: 100px;
+    background: no-repeat center/100% url(../../assets/icons/vector.svg);
+}
+
+.how-it-works button {
+    border: none;
+}
+/*-------------------------------------------------*/

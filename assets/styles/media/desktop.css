@@ -1,0 +1,120 @@
+/* -------------- Desktop Screens -------------- */
+@media screen
+and (min-width: 1000px)
+and (max-width: 1280px) {
+    /*-------------------- Header ----------------------*/
+    header {
+        padding: 0.875rem 1.875rem;
+    }
+    header #menu-links {
+        display: none;
+    }
+    header #top-icon-menu {
+        display: none;
+    }
+    /*-------------------------------------------------*/
+    .backstage .container,
+    .pets .container,
+    .pick-and-feed .container,
+    .testimonials .container,
+    footer .container {
+        max-width: 100%;
+        padding: 0 1.875rem;
+    }
+    /*------------ Banner block ---------------*/
+    .banner-content {
+        margin-top: 2.625em;
+    }
+    .banner > img {
+        max-width: 100%;
+        height: 36.500em;
+        top: 0;
+    }
+    .banner-content::after {
+        position: absolute;
+        top: -2.25em;
+        right: 7.75em;
+        width: 23em;
+        height: 23em;
+
+    }
+    h2.banner-title {
+        font-size: 5.125em;
+    }
+    /*--------------------------------------------*/
+    /*------------ Backstage block ---------------*/
+    .backstage-content > img {
+        max-width: calc(100%/2 - 2em);
+    }
+    .backstage-content {
+        gap: 2em;
+    }
+    .backstage-text {
+        max-width: 35%;
+    }
+    /*-------------------------------------------------*/
+    /*-------------- Pets block ---------------*/
+    div.pets.block {
+        margin-bottom: 0;
+    }
+    .card-grid {
+        row-gap: 5.750em;
+        column-gap: 1em;
+    }
+    .card {
+        max-width: calc((100vw/3) - 1.25em*2);
+
+    }
+    .arrow_elips:nth-child(1) {
+        margin-left: calc(100%/2 - 10em);
+    }
+    .arrow_elips {
+        margin-right: calc(100%/2 - 10em);
+    }
+    .pets-decoration.right {
+        max-width: 11.250em;
+        max-height: auto;
+        position: relative;
+        align-self: flex-end;
+        margin-top: -10em;
+    }
+    .pets-decoration.left {
+        position: relative;
+        max-height: 12.5em;
+        align-self: flex-start;
+        margin-top: -60px;
+    }
+    /*--------------------------------------------*/
+    /*------------ Pick-and-Feed Block -----------*/
+    .pick-and-feed.block {
+        padding: 30px 1.875rem 50px;
+    }
+    .pick-and-feed .container {
+        padding: 30px 30px 50px;
+    }
+    .how-it-works .wrapper {
+        padding: 0;
+        justify-content: center;
+    }
+    .arrow-right {
+        margin-left: 1.875em;
+        margin-right: 1.875em;
+    }
+    /*--------------------------------------------*/
+    /*------------ Footer block ---------------*/
+    footer #sm-social-media{
+        display: none;
+    }
+    footer .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    footer .input-wrapper {
+        margin-top: 0;
+    }
+    footer input[type=email] {
+        margin-top: 15px;
+    }
+    /*--------------------------------------------*/
+
+}

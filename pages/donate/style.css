@@ -9,7 +9,12 @@
 -------------------------------------------------*/
 /*-------------------------------------------------
     ==== File Structure  ====
-        * Main Stylesheet
+         * Variables
+        * Body
+        * Typography
+        * Components Buttons
+        * Header
+        * Footer
         * Banner block
         * Donation Information block
             - Feed Count
@@ -21,7 +26,28 @@
 
 /*-------------------------------------------------*/
 /* Main Stylesheet + Header / Footer  */
-@import url(../main/style.css);
+/* @import url(../main/style.css); */
+@import url(../../assets/styles/variables.css);
+@import url(../../assets/styles/body.css);
+@import url(../../assets/styles/typography.css);
+@import url(../../assets/styles/components.css);
+@import url(../../assets/styles/header.css);
+@import url(../../assets/styles/footer.css);
+
+/*------------------------------------------
+  [Responsive Grid Media Queries - 1600, 1280, 1000, 640, 320]
+        1600-1280   - Non-Retina Screens
+        1280-1000   - desktop (default grid)
+        1000-640    - tablet landscape
+        640-320     - tablet
+        320-less    - phone landscape & smaller
+--------------------------------------------*/
+
+@import url(../../assets/styles/media/non-retina-screens.css);
+@import url(../../assets/styles/media/desktop.css);
+@import url(../../assets/styles/media/tablet-landscape.css);
+@import url(../../assets/styles/media/tablet.css);
+@import url(../../assets/styles/media/phone.css);
 
 body {
     color: #333B41;

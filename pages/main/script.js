@@ -42,4 +42,40 @@ input.addEventListener("input", event =>{
 
 input.addEventListener("focusout", event => {
     buttonSubmit.classList.remove("invalid");
-})
+});
+
+// Mobile Navigation Menu
+function showTopNav() {
+    let menu = document.getElementById('menu-links');
+    let header = document.getElementById('header');
+    let topMenuWrap = document.getElementById('top-nav');
+    let logo = document.getElementById('top-logo');
+    let logoText = document.getElementById('top-petstory');
+    let menuIcon = document.getElementById('top-icon-menu');
+    if(menu.style.display === 'block') {
+        menu.style.display = 'none';
+        header.classList.remove('menu-isopened');
+        topMenuWrap.classList.remove('menu-isopened-wrap');
+        logo.classList.remove('m-logo');
+        logo.classList.add('sm-logo');
+        logoText.classList.remove('m-logo-tx');
+        menuIcon.style.color = '#FFFFFF';
+    } else {
+        menu.style.display = 'block';
+        header.classList.add('menu-isopened');
+        topMenuWrap.classList.add('menu-isopened-wrap');
+        logo.classList.remove('sm-logo');
+        logo.classList.add('m-logo');
+        logoText.classList.add('m-logo-tx');
+        menuIcon.style.color = '#000000';
+    }
+}
+
+// Show Modal Testimonials Pop-Up:
+function showModal() {
+    document.getElementById('modal-overlay').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modal-overlay').style.display = 'none';
+}

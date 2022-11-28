@@ -9,17 +9,29 @@
     <meta name="author" content="Ievgeniia Abdulina">
     <title>Online-zoo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- HEADER -->
-    <header>
+    <header id="header">
         <div class="container">
-            <div class="navigation-wrapper">
-                <div class="logo">
+            <div id="top-nav" class="navigation-wrapper topnav">
+                <div id="top-logo" class="logo sm-logo">
                     <a href="../main/">
-                        <h1 class="petstory">PetStory Online</h1>
+                        <h1 id="top-petstory" class="petstory">PetStory Online</h1>
                     </a>
                 </div>
+                <ul id="menu-links">
+                    <li class="nav-link current" value="about"><a class="topnav-link" href="../main/">About</a></li>
+                    <li class="nav-link" value="map"><a class="topnav-link" href="#">Map</a></li>
+                    <li class="nav-link" value="zoos"><a class="topnav-link" href="#">Zoos</a></li>
+                    <li class="nav-link" value="donate"><a class="topnav-link" href="../donate/">Donate</a></li>
+                    <li class="nav-link" value="contact"><a class="topnav-link" href="#contact">Contact Us</a></li>
+                    <li><a class="topnav-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" rel="noopener">Designed by ©</a></li>
+                </ul>
+                <a id="top-icon-menu" href="javascript:void(0);" class="icon-menu" onclick="showTopNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
                 <nav class="navigation-bar">
                     <ul>
                         <li class="nav-link" value="about"><a href="../main/">About</a></li>
@@ -64,7 +76,7 @@
                         <form action="" class="feed-range">
                             <div class="feed-range-line"></div>
                             <ul class="feed-range-dot-container">
-                                <li class="feed-range-dot">
+                                <li id="range-5000" class="feed-range-dot">
                                     <div class="range-control" for="range">
                                         <input class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
@@ -73,7 +85,7 @@
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li id="range-2000" class="feed-range-dot">
                                     <div class="range-control" for="range">
                                         <input class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
@@ -82,16 +94,16 @@
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li id="range-1000" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range" checked>
+                                        <input id="checked-dot-lg" class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">1000</p>
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li aria-live="range-500" class="feed-range-dot">
                                     <div class="range-control" for="range">
                                         <input class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
@@ -100,7 +112,7 @@
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li id="range-250" class="feed-range-dot">
                                     <div class="range-control" for="range">
                                         <input class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
@@ -109,16 +121,16 @@
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li id="range-100" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
+                                        <input id="checked-dot-sm" class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">100</p>
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li id="range-50" class="feed-range-dot">
                                     <div class="range-control" for="range">
                                         <input class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
@@ -127,7 +139,7 @@
                                         </label>
                                     </div>
                                 </li>
-                                <li class="feed-range-dot">
+                                <li id="range-25" class="feed-range-dot">
                                     <div class="range-control" for="range">
                                         <input class="yellow-dot" type="radio" name="range">
                                         <label class="range-value">
@@ -165,6 +177,21 @@
     <footer id="contact">
         <div class="container">
             <div class="subscribe-wrapper">
+                <div id="sm-social-media" class="social-media">
+                    <nav class="social-media-links">
+                        <ul>
+                            <li><a class="social-media-icon" href="https://www.facebook.com/" target="_blank">
+                                <img src="../../assets/icons/facebook-ic.svg" alt="facebook icon">
+                            </a></li>
+                            <li><a class="social-media-icon" href="https://twitter.com/" target="_blank">
+                                <img src="../../assets/icons/twitter-ic.svg" alt="Twitter icon"></a></li>
+                            <li><a class="social-media-icon" href="https://www.instagram.com/" target="_blank">
+                                <img src="../../assets/icons/instagram-ic.svg" alt="Instagram icon"></a></li>
+                            <li><a class="social-media-icon" href="https://www.youtube.com/" target="_blank">
+                                <img src="../../assets/icons/youtube-ic.svg" alt="YouTube icon"></a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="subscribe-row">
                     <div class="logo">
                         <a href="../../pages/main/index.html">
@@ -182,7 +209,7 @@
                 <a href="../donate/index.html"><button class="btn square" type="button">donate for volunteers</button></a>
             </div>
             <div class="links-wrapper">
-                <div class="social-media">
+                <div id="lg-social-media" class="social-media">
                     <nav class="social-media-links">
                         <ul>
                             <li><a class="social-media-icon" href="https://www.facebook.com/" target="_blank">
