@@ -1,4 +1,5 @@
 /* -------------- Tablet Screens -------------- */
+/* === Main Page === */
 @media screen
 and (min-width: 320px)
 and (max-width: 640px) {
@@ -20,9 +21,6 @@ and (max-width: 640px) {
     .navigation-bar,
     .design-author {
         display: none;
-    }
-    #top-icon-menu {
-        display: block;
     }
     header .logo {
         max-width: fit-content;
@@ -67,6 +65,9 @@ and (max-width: 640px) {
         width: 100%;
         overflow: hidden;
         position: relative;
+    }
+    .topnav #top-icon-menu {
+        display: block;
     }
     .topnav #menu-links {
         display: none;
@@ -322,4 +323,52 @@ and (max-width: 640px) {
         margin-bottom: 20px;
     }
     /*--------------------------------------------*/
+}
+
+/* === Donate Page === */
+@media screen
+and (min-width: 320px)
+and (max-width: 640px) {
+    /*------------ DONATION INFORMATION BLOCK ---------------*/
+    section.feed {
+        padding-top: 30px;
+    }
+    section.feed .container {
+        padding: 0 1.25rem;
+    }
+    section.feed .feed-text h3:nth-child(1) {
+        width: 100%;
+        font-size: 24px;
+        line-height: 120%;
+    }
+    section.feed .feed-text h3:nth-child(3) {
+        margin-top: 30px;
+    }
+    section.feed .feed-text {
+        margin-bottom: 30px;
+    }
+    section.feed .feed-donation-info {
+        padding: 30px 0 30px;
+    }
+    section.feed .feed-range-container {
+        width: calc(100vw - (1.25rem*2));
+    }
+    .feed-range-container p:nth-child(1) {
+        margin-left: 10px;
+    }
+    section.feed form.feed-range {
+        max-width: 100%;
+    }
+    form.feed-range .feed-range-line {
+        max-width: calc(100% - 35px*2);
+    }
+    form.feed-range ul.feed-range-dot-container {
+        max-width: calc(100% - (35px*2));
+    }
+    #range-5000.feed-range-dot,
+    #range-2000.feed-range-dot,
+    #range-1000.feed-range-dot {
+        display: none;
+    }
+    /*-------------------------------------------------------*/
 }

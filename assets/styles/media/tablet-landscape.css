@@ -139,3 +139,41 @@
         }
         /*--------------------------------------------*/
 }
+
+/* === Donate Page === */
+@media screen
+    and (min-width: 640px)
+    and (max-width: 1000px) {
+        /*------------ DONATION INFORMATION BLOCK ---------------*/
+        section.feed {
+            padding-top: 40px;
+        }
+        section.feed .container {
+            padding: 0 1.875rem;
+        }
+        section.feed .feed-text h3:nth-child(1) {
+            width: 90%;
+        }
+        section.feed .feed-donation-info {
+            padding: 10px 40px 45px;
+        }
+        section.feed .subtitle {
+            text-align: center;
+        }
+        section.feed .feed-range-container {
+            width: calc(100vw - (1.875rem*2 + 65px*2));
+        }
+        section.feed form.feed-range {
+            max-width: 100%;
+        }
+        form.feed-range .feed-range-line {
+            max-width: calc(100% - 16px*2);
+        }
+        form.feed-range ul.feed-range-dot-container {
+            max-width: calc(100vw - (1.875rem*2 + 65px*2));
+        }
+        #range-5000.feed-range-dot {
+            display: none;
+        }
+        /*--------------------------------------------*/
+    }
