@@ -9,6 +9,7 @@ div.pets.block {
 }
 
 .pets .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,11 +18,11 @@ div.pets.block {
 }
 
 .card-grid {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 20px 28px;
+    gap: 20px 28px; */
 }
 
 .card-content {
@@ -132,4 +133,57 @@ div.pets.block {
     margin-top: 480px;
     z-index: -1;
 }
+
 /*-------------------------------------------------*/
+
+/* Slideshow / Carousel */
+
+    /* Slideshow container */
+.slideshow-container {
+    padding: 2px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+    /* Hide the images by default */
+.slides-content {
+    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 28px;
+}
+.slides-content.second {
+    display: none;
+}
+.slides-content.third {
+    display: none;
+}
+
+    /* Next & previous buttons */
+.arrow_elips {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: no-repeat center/35% url(../../assets/icons/arrow_right.svg) var(--orange);
+    margin-right: 1180px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.prev {
+    transform: rotate(180deg);
+    margin-left: 1180px;
+}
+
+.arrow_elips:hover {
+    background-color: #E47209;
+}
+
+.arrow_elips:active {
+    background-color: var(--green);
+}
+
+/* Slideshow animation */

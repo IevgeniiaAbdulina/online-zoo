@@ -95,3 +95,163 @@ function showModal() {
 function closeModal() {
     document.getElementById('modal-overlay').style.display = 'none';
 }
+
+// Slideshow / Carousel
+let slideIndex = 1;
+const slidesContent = document.getElementsByClassName('slides-content');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+// showSlides(slideIndex);
+
+// Next/previous controls
+// function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
+
+prev.addEventListener('click', e => {
+    //plusSlides(-1);
+    console.log('left');
+    buildList([...animals], true);
+
+});
+
+next.addEventListener('click', e => {
+    //plusSlides(1);
+    console.log('right');
+    buildList([...animals], true);
+});
+
+// function showSlides(n) {
+//     if (n > slidesContent.length) {slideIndex = 1};
+//     if (n < 1) {slideIndex = slidesContent.length};
+
+//     for (let i=0; i < slidesContent.length; i++) {
+//         slidesContent[i].style.display = 'none';
+//     }
+//     slidesContent[slideIndex-1].style.display = 'flex';
+// }
+
+
+// - The order of the pictures is generated randomly:
+class Animal {
+    constructor(imgUrl, title, description) {
+        this.imgUrl = imgUrl;
+        this.title = title;
+        this.description = description;
+    }
+}
+
+const animals = [
+    new Animal('../../assets/images/pandas.png', 'giant Pandas', 'Native to Southwest China'),
+    new Animal('../../assets/images/eagles.png', 'pets-title', 'Native to South America'),
+    new Animal('../../assets/images/gorillas.png', 'Gorillas', 'Native to Congo'),
+    new Animal('../../assets/images/sloth.png', 'Two-toed Sloth', 'Mesoamerica, South America'),
+    new Animal('../../assets/images/cheetahs.png', 'cheetahs', 'Native to Africa'),
+    new Animal('../../assets/images/penguins.png', 'Penguins', 'Native to Antarctica'),
+];
+
+// const copyAnimals = [...animals];
+// console.log(copyAnimals);
+
+var countOfCardsOnScreen = 6;
+let cardParent = document.querySelector('.slides-content');
+
+window.onload = (event) => {
+    buildList([...animals], true);
+}
+
+window.addEventListener('resize', event => {
+    buildList([...animals]);
+});
+
+const removeAllChildNodes = (parent) => {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+};
+function updateCountOfCards(viewToCheck) {
+    if(viewToCheck.offsetWidth <= 640) {
+        countOfCardsOnScreen = 4;
+    } else {
+        countOfCardsOnScreen = 6;
+    }
+};
+
+function randomizeList(copyAnimals) {
+    let count = copyAnimals.length;
+    const showAnimalsList = [];
+
+    for (let i = 0; i < count; i++) {
+      let randomIndex = Math.floor(Math.random() * copyAnimals.length);
+      showAnimalsList.push(copyAnimals[randomIndex]);
+      copyAnimals.splice(randomIndex, 1);
+    }
+    return showAnimalsList;
+};
+
+function buildList(animalList, randomize) {
+    const cardsContainer = document.getElementById('pets-container');
+
+    removeAllChildNodes(cardParent);
+    updateCountOfCards(cardsContainer);
+    const updatedList = (randomize) ? randomizeList(animalList) : animalList;
+
+    for (let i=0; i < countOfCardsOnScreen; i++) {
+        const animal = updatedList[i];
+        animalCard(animal, cardParent);
+    }
+}
+
+// create Animal Card =====================================
+const animalCard = (animalInfo, cardParent) => {
+    const fragment = document.createDocumentFragment();
+
+    // Card
+    const card = document.createElement('div');
+        card.className = 'card';
+
+    // card Image
+    const imgWrap = document.createElement('div');
+        imgWrap.className = 'img-wrap';
+
+    const img = document.createElement('img');
+        img.className = 'pets-img';
+        //img.id = `pets-img#${animalInfo.index}`;
+        img.src = `${animalInfo.imgUrl}`;
+        img.alt = 'pet image';
+
+    const petsHovered = document.createElement('div');
+        petsHovered.className = 'pets-text-hovered';
+    const petsTitle = document.createElement('p');
+        petsTitle.className = 'pets-title';
+        petsTitle.textContent = `${animalInfo.title}`;
+
+    const description = document.createElement('p');
+        description.className = 'sm-paragraph';
+        description.textContent = `${animalInfo.description}`;
+
+    const petsTitle2 = petsTitle.cloneNode(true);
+    const description2 = description.cloneNode(true);
+
+    // card content
+    const cardContent = document.createElement('div');
+    cardContent.className = 'card-content';
+
+    const petsText = document.createElement('div');
+        petsText.className = 'pets-text';
+
+    const icon = document.createElement('div');
+        icon.className = 'banana-bamboo_icon';
+
+    // Append elments
+    petsHovered.append(petsTitle, description);
+    imgWrap.append(img, petsHovered);
+    petsText.append(petsTitle2, description2);
+    cardContent.append(petsText, icon);
+    card.append(imgWrap, cardContent);
+
+    fragment.appendChild(card);
+    cardParent.appendChild(fragment);
+}
+// =============================================

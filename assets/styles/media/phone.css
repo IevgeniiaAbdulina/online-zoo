@@ -65,22 +65,22 @@ and (max-width: 320px) {
         overflow: hidden;
         position: relative;
     }
-    .topnav #menu-links {
+    #menu-links {
         display: none;
     }
-    .topnav #menu-links {
+    #menu-links {
         width: 100%;
         list-style: none;
         color: black;
-        margin-top: 30px;
+        margin-top: 26px;
     }
-    .topnav a.topnav-link {
+    a.topnav-link {
         padding: 15px 0;
         text-decoration: none;
         font-size: 17px;
         display: block;
     }
-    .topnav a.icon-menu {
+    a.icon-menu {
         display: block;
         position: absolute;
         right: 0;
@@ -88,10 +88,10 @@ and (max-width: 320px) {
         color: white;
         font-size: 18px;
     }
-    .topnav a.topnav-link:hover + li.nav-link.current{
+    /* .topnav a.topnav-link:hover + li.nav-link.current{
         color: var(--orange);
         font-weight: 700;
-    }
+    } */
     /*--------------------------------------------*/
     /*------------ Banner Block ---------------*/
     .banner-content {

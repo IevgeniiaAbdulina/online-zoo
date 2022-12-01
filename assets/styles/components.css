@@ -43,7 +43,7 @@ button.square {
     justify-content: space-between;
     align-items: center;
 }
-
+/* 
 .arrow_elips {
     width: 62px;
     height: 62px;
@@ -64,7 +64,7 @@ button.square {
 
 .arrow_elips:active {
     background-color: var(--green);
-}
+} */
 /*-------------------------------------------------*/
 /* === Input <range> === */
 input {
