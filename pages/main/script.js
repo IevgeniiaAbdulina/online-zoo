@@ -96,41 +96,7 @@ function closeModal() {
     document.getElementById('modal-overlay').style.display = 'none';
 }
 
-// Slideshow / Carousel
-let slideIndex = 1;
-const slidesContent = document.getElementsByClassName('slides-content');
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
 
-// showSlides(slideIndex);
-
-// Next/previous controls
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
-
-prev.addEventListener('click', e => {
-    //plusSlides(-1);
-    console.log('left');
-    buildList([...animals], true);
-
-});
-
-next.addEventListener('click', e => {
-    //plusSlides(1);
-    console.log('right');
-    buildList([...animals], true);
-});
-
-// function showSlides(n) {
-//     if (n > slidesContent.length) {slideIndex = 1};
-//     if (n < 1) {slideIndex = slidesContent.length};
-
-//     for (let i=0; i < slidesContent.length; i++) {
-//         slidesContent[i].style.display = 'none';
-//     }
-//     slidesContent[slideIndex-1].style.display = 'flex';
-// }
 
 
 // - The order of the pictures is generated randomly:
@@ -154,16 +120,21 @@ const animals = [
 // const copyAnimals = [...animals];
 // console.log(copyAnimals);
 
-var countOfCardsOnScreen = 6;
-let cardParent = document.querySelector('.slides-content');
+const pageCount = 5;
+let allAnimalsGroupedByPages = [];
+
+// var countOfCardsOnScreen = 6;
+let slideshowContainer = document.querySelector('.slideshow-container');
+
+// Slideshow / Carousel
+let slideIndex = 1;
+const slidesContent = document.getElementsByClassName('slides-content');
+
 
 window.onload = (event) => {
-    buildList([...animals], true);
+    allAnimalsGroupedByPages = buildList(animals);
+    showSlides(slideIndex, slidesContent);
 }
-
-window.addEventListener('resize', event => {
-    buildList([...animals]);
-});
 
 const removeAllChildNodes = (parent) => {
     while (parent.firstChild) {
@@ -172,13 +143,14 @@ const removeAllChildNodes = (parent) => {
 };
 function updateCountOfCards(viewToCheck) {
     if(viewToCheck.offsetWidth <= 640) {
-        countOfCardsOnScreen = 4;
+        return 4;
     } else {
-        countOfCardsOnScreen = 6;
+        return 6;
     }
 };
 
-function randomizeList(copyAnimals) {
+function randomizeList(sourceList) {
+    let copyAnimals = [...sourceList];
     let count = copyAnimals.length;
     const showAnimalsList = [];
 
@@ -190,21 +162,29 @@ function randomizeList(copyAnimals) {
     return showAnimalsList;
 };
 
-function buildList(animalList, randomize) {
+function buildList(animalList) {
     const cardsContainer = document.getElementById('pets-container');
+    const countOfCardsOnScreen = updateCountOfCards(cardsContainer);
 
-    removeAllChildNodes(cardParent);
-    updateCountOfCards(cardsContainer);
-    const updatedList = (randomize) ? randomizeList(animalList) : animalList;
+    let allAnimalsGroupedByPages = [];
+    for(let pageIndex = 0; pageIndex < pageCount; pageIndex++) {
+        const updatedList = randomizeList(animalList);
+        allAnimalsGroupedByPages.push(updatedList);
 
-    for (let i=0; i < countOfCardsOnScreen; i++) {
-        const animal = updatedList[i];
-        animalCard(animal, cardParent);
+        const cardHolder = document.createElement('div');
+        cardHolder.className = 'slides-content';
+        //cardParent.cloneNode(true);
+        for (let i=0; i < countOfCardsOnScreen; i++) {
+            const animal = updatedList[i];
+            animalCard(animal, cardHolder);
+        }
+        slideshowContainer.append(cardHolder);
     }
+    return allAnimalsGroupedByPages;
 }
 
 // create Animal Card =====================================
-const animalCard = (animalInfo, cardParent) => {
+const animalCard = (animalInfo, parent) => {
     const fragment = document.createDocumentFragment();
 
     // Card
@@ -217,7 +197,6 @@ const animalCard = (animalInfo, cardParent) => {
 
     const img = document.createElement('img');
         img.className = 'pets-img';
-        //img.id = `pets-img#${animalInfo.index}`;
         img.src = `${animalInfo.imgUrl}`;
         img.alt = 'pet image';
 
@@ -252,6 +231,35 @@ const animalCard = (animalInfo, cardParent) => {
     card.append(imgWrap, cardContent);
 
     fragment.appendChild(card);
-    cardParent.appendChild(fragment);
+    parent.appendChild(fragment);
 }
 // =============================================
+
+// Slideshow / Carousel
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+// Next/previous controls
+function plusSlides(n, slides) {
+    showSlides(slideIndex += n, slides);
+}
+
+prev.addEventListener('click', e => {
+    plusSlides(-1, slidesContent);
+    console.log('left');
+});
+
+next.addEventListener('click', e => {
+    plusSlides(1, slidesContent);
+    console.log('right');
+});
+
+function showSlides(n, slides) {
+    if (n > slides.length) {slideIndex = 1};
+    if (n < 1) {slideIndex = slides.length};
+
+    for (let i=0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slides[slideIndex-1].style.display = 'flex';
+}
