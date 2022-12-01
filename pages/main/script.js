@@ -59,6 +59,7 @@ function showTopNav() {
         logo.classList.remove('m-logo');
         logo.classList.add('sm-logo');
         logoText.classList.remove('m-logo-tx');
+        menuIcon.innerHTML = '<i class="fa fa-bars"></i>';
         menuIcon.style.color = '#FFFFFF';
     } else {
         menu.style.display = 'block';
@@ -67,6 +68,7 @@ function showTopNav() {
         logo.classList.remove('sm-logo');
         logo.classList.add('m-logo');
         logoText.classList.add('m-logo-tx');
+        menuIcon.innerHTML = '<i class="fa fa-times"</i>';
         menuIcon.style.color = '#000000';
     }
 }
