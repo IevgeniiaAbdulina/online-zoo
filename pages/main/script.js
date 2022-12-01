@@ -45,24 +45,38 @@ input.addEventListener("focusout", event => {
 });
 
 // Mobile Navigation Menu
+let menu = document.getElementById('menu-links');
+let header = document.getElementById('header');
+let topMenuWrap = document.getElementById('top-nav');
+let logo = document.getElementById('top-logo');
+let logoText = document.getElementById('top-petstory');
+let menuIcon = document.getElementById('top-icon-menu');
+let topNaveOverlay = document.querySelector('.top-menu-overlay');
+
+function hideTopNave() {
+    menu.style.display = 'none';
+    topNaveOverlay.style.display = 'none';
+    header.classList.remove('menu-isopened');
+    topMenuWrap.classList.remove('menu-isopened-wrap');
+    logo.classList.remove('m-logo');
+    logo.classList.add('sm-logo');
+    logoText.classList.remove('m-logo-tx');
+    menuIcon.innerHTML = '<i class="fa fa-bars"></i>';
+    menuIcon.style.color = '#FFFFFF';
+}
+
+topNaveOverlay.addEventListener('click', event => {
+    if(event.target === event.currentTarget) {
+        hideTopNave();
+    }
+})
+
 function showTopNav() {
-    let menu = document.getElementById('menu-links');
-    let header = document.getElementById('header');
-    let topMenuWrap = document.getElementById('top-nav');
-    let logo = document.getElementById('top-logo');
-    let logoText = document.getElementById('top-petstory');
-    let menuIcon = document.getElementById('top-icon-menu');
     if(menu.style.display === 'block') {
-        menu.style.display = 'none';
-        header.classList.remove('menu-isopened');
-        topMenuWrap.classList.remove('menu-isopened-wrap');
-        logo.classList.remove('m-logo');
-        logo.classList.add('sm-logo');
-        logoText.classList.remove('m-logo-tx');
-        menuIcon.innerHTML = '<i class="fa fa-bars"></i>';
-        menuIcon.style.color = '#FFFFFF';
+        hideTopNave();
     } else {
         menu.style.display = 'block';
+        topNaveOverlay.style.display = 'block';
         header.classList.add('menu-isopened');
         topMenuWrap.classList.add('menu-isopened-wrap');
         logo.classList.remove('sm-logo');
