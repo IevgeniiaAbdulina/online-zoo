@@ -270,16 +270,36 @@ function showSlides(n, slides) {
 // ----------- **Carousel** in a block `Testimonials` -----------
 var testimonials = [];
 let testimonialsParent = document.querySelector('.text-block');
+let rangeElem = document.querySelector('input[type="range"]');
+    rangeElem.min = 0;
+    rangeElem.max = 0;
+    rangeElem.value = 1;
+
+    // count of testimonials on the screen:
+function countTestimonials(testimonialsParent) {
+    console.log('parent width: ',testimonialsParent.offsetWidth);
+    if(testimonialsParent.offsetWidth <= 1000) {
+        return 3;
+    } else {
+        return 4;
+    }
+};
 
 // get users data:
 fetch('./data.JSON')
     .then(res => res.json())
     .then(data => {
-        data.map(elem => {
+        testimonials = data;
+        rangeElem.max = testimonials.length;
+    })
+    .then(() => {
+        let testimonialsOnPage = countTestimonials(testimonialsParent);
+        removeAllChildNodes(testimonialsParent);
+        for(let i=0; i < testimonialsOnPage; i++) {
+            let elem = testimonials[i];
             testimonilChild(elem, testimonialsParent);
-        });
+        }
     });
-
 
 // create Testimonials Card ==========================
 const testimonilChild = (testimonial, parent) => {
@@ -339,9 +359,7 @@ const testimonilChild = (testimonial, parent) => {
 }
 // =============================================
 
-let rangeElem = document.querySelector('input[type="range"]');
-    // rangeElem.min = 0;
-    // rangeElem.max;
+
 
 const rangeValue = () => {
     let newValue = rangeElem.value;
