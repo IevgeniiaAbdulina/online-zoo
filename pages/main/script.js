@@ -97,41 +97,41 @@ function closeModal() {
 }
 
 
+// --------------- **Carousel** in a block `Pets` ---------------
 
-
-// - The order of the pictures is generated randomly:
+// creating and initializing an object instance of Animal class:
 class Animal {
-    constructor(imgUrl, title, description) {
+    constructor(imgUrl, title, description, icon) {
         this.imgUrl = imgUrl;
         this.title = title;
         this.description = description;
+        this.icon = icon;
     }
 }
 
+// create objects of the type Animal
 const animals = [
-    new Animal('../../assets/images/pandas.png', 'giant Pandas', 'Native to Southwest China'),
-    new Animal('../../assets/images/eagles.png', 'pets-title', 'Native to South America'),
-    new Animal('../../assets/images/gorillas.png', 'Gorillas', 'Native to Congo'),
-    new Animal('../../assets/images/sloth.png', 'Two-toed Sloth', 'Mesoamerica, South America'),
-    new Animal('../../assets/images/cheetahs.png', 'cheetahs', 'Native to Africa'),
-    new Animal('../../assets/images/penguins.png', 'Penguins', 'Native to Antarctica'),
+    new Animal('../../assets/images/pandas.png', 'giant Pandas', 'Native to Southwest China', 'banana-bamboo_icon'),
+    new Animal('../../assets/images/eagles.png', 'eagles', 'Native to South America', 'meet-fish_icon'),
+    new Animal('../../assets/images/gorillas.png', 'Gorillas', 'Native to Congo', 'banana-bamboo_icon'),
+    new Animal('../../assets/images/sloth.png', 'Two-toed Sloth', 'Mesoamerica, South America', 'banana-bamboo_icon'),
+    new Animal('../../assets/images/cheetahs.png', 'cheetahs', 'Native to Africa', 'meet-fish_icon'),
+    new Animal('../../assets/images/penguins.png', 'Penguins', 'Native to Antarctica', 'meet-fish_icon'),
+    new Animal('../../assets/images/alligator.png', 'Alligators', 'Native to Southeastern United States', 'meet-fish_icon')
 ];
 
-// const copyAnimals = [...animals];
-// console.log(copyAnimals);
-
+// count of Slides Pages
 const pageCount = 5;
 let allAnimalsGroupedByPages = [];
 
-// var countOfCardsOnScreen = 6;
-let slideshowContainer = document.querySelector('.slideshow-container');
-
-// Slideshow / Carousel
 let slideIndex = 1;
+let slideshowContainer = document.querySelector('.slideshow-container');
 const slidesContent = document.getElementsByClassName('slides-content');
+// Next/previous controls
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
-
-window.onload = (event) => {
+window.onload = () => {
     allAnimalsGroupedByPages = buildList(animals);
     showSlides(slideIndex, slidesContent);
 }
@@ -149,6 +149,7 @@ function updateCountOfCards(viewToCheck) {
     }
 };
 
+// - The order of the pictures is generated randomly:
 function randomizeList(sourceList) {
     let copyAnimals = [...sourceList];
     let count = copyAnimals.length;
@@ -173,7 +174,7 @@ function buildList(animalList) {
 
         const cardHolder = document.createElement('div');
         cardHolder.className = 'slides-content';
-        //cardParent.cloneNode(true);
+
         for (let i=0; i < countOfCardsOnScreen; i++) {
             const animal = updatedList[i];
             animalCard(animal, cardHolder);
@@ -181,15 +182,15 @@ function buildList(animalList) {
         slideshowContainer.append(cardHolder);
     }
     return allAnimalsGroupedByPages;
-}
+};
 
-// create Animal Card =====================================
+// create Animal Card ==========================
 const animalCard = (animalInfo, parent) => {
     const fragment = document.createDocumentFragment();
 
     // Card
     const card = document.createElement('div');
-        card.className = 'card';
+        card.className = 'card flipped';
 
     // card Image
     const imgWrap = document.createElement('div');
@@ -221,7 +222,7 @@ const animalCard = (animalInfo, parent) => {
         petsText.className = 'pets-text';
 
     const icon = document.createElement('div');
-        icon.className = 'banana-bamboo_icon';
+        icon.className = `${animalInfo.icon}`;
 
     // Append elments
     petsHovered.append(petsTitle, description);
@@ -232,26 +233,28 @@ const animalCard = (animalInfo, parent) => {
 
     fragment.appendChild(card);
     parent.appendChild(fragment);
-}
+};
 // =============================================
 
-// Slideshow / Carousel
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
+// - check the condition to ensure that our blocks perform exactly one movement at a time.
+let flippedIsActive = false;
 
-// Next/previous controls
 function plusSlides(n, slides) {
+    if(flippedIsActive) return;
+    flippedIsActive = true;
     showSlides(slideIndex += n, slides);
-}
+
+    setTimeout(() => {
+        flippedIsActive = false;
+    }, 1100);
+};
 
 prev.addEventListener('click', e => {
     plusSlides(-1, slidesContent);
-    console.log('left');
 });
 
 next.addEventListener('click', e => {
     plusSlides(1, slidesContent);
-    console.log('right');
 });
 
 function showSlides(n, slides) {
@@ -262,4 +265,4 @@ function showSlides(n, slides) {
         slides[i].style.display = 'none';
     }
     slides[slideIndex-1].style.display = 'flex';
-}
+};
