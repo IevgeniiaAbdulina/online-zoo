@@ -121,7 +121,7 @@ const animals = [
 ];
 
 // count of Slides Pages
-const pageCount = 5;
+const pageCount = 6;
 let allAnimalsGroupedByPages = [];
 
 let slideIndex = 1;
@@ -266,3 +266,86 @@ function showSlides(n, slides) {
     }
     slides[slideIndex-1].style.display = 'flex';
 };
+// --------------------------------------------------------------
+// ----------- **Carousel** in a block `Testimonials` -----------
+var testimonials = [];
+let testimonialsParent = document.querySelector('.text-block');
+
+// get users data:
+fetch('./data.JSON')
+    .then(res => res.json())
+    .then(data => {
+        data.map(elem => {
+            testimonilChild(elem, testimonialsParent);
+        });
+    });
+
+
+// create Testimonials Card ==========================
+const testimonilChild = (testimonial, parent) => {
+    const fragment = document.createDocumentFragment();
+    // console.log("create child", testimonial)
+
+    let box = document.createElement('div');
+        box.className = 'text-block-box';
+        box.addEventListener('click', e => showModal());
+
+    let boxHeader = document.createElement('div');
+        boxHeader.className = 'box-header';
+
+        let userIcon = document.createElement('img');
+            userIcon.className = 'user-icon';
+            userIcon.id = 'user-ic';
+            userIcon.style.backgroundImage = `url(${testimonial.userIcon})`;
+
+        let personalInfo = document.createElement('div');
+            personalInfo.className = 'personal-info';
+
+                let userName = document.createElement('h4');
+                    userName.className = 'user-name';
+                    userName.id = 'user-name';
+                    userName.innerText = `${testimonial.userName}`;
+
+                let row = document.createElement('div');
+                    row.className ='row';
+
+                    let userLocation = document.createElement('p');
+                        userLocation.className = 'location';
+                        userLocation.id = 'user-location';
+                        userLocation.innerText = `${testimonial.location}`;
+
+                    let postDate = document.createElement('p');
+                        postDate.className = 'date';
+                        postDate.id = 'post-date';
+                        postDate.innerText = `${testimonial.date}`;
+                row.append(userLocation, postDate);
+        personalInfo.append(userName, row);
+    boxHeader.append(userIcon, personalInfo);
+
+    let boxBody = document.createElement('div');
+        boxBody.className = 'box-body';
+
+        let message = document.createElement('p');
+            message.className = 'sm-paaragraph';
+            message.id = 'user-message';
+            message.innerText = `${testimonial.message}`;
+    boxBody.appendChild(message);
+
+    // appending elements
+    box.append(boxHeader, boxBody);
+
+    fragment.appendChild(box);
+    parent.appendChild(fragment);
+}
+// =============================================
+
+let rangeElem = document.querySelector('input[type="range"]');
+    // rangeElem.min = 0;
+    // rangeElem.max;
+
+const rangeValue = () => {
+    let newValue = rangeElem.value;
+    console.log(newValue);
+}
+rangeElem.addEventListener('input', rangeValue);
+// --------------------------------------------------------------

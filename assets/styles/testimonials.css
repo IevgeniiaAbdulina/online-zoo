@@ -26,6 +26,7 @@
 
 .text-block-box {
     width: calc((100% / 4) - 15px);
+    min-width: 268px;
     height: 390px;
     padding: 16px 16px 20px;
     position: relative;
@@ -57,28 +58,12 @@
     color: var(--gray);
 }
 
-.box-header .user-icon.user-one {
+.user-icon {
     width: 37px;
     height: 37px;
-    background: no-repeat center/100% url(../../assets/icons/user_icon.png);
-}
-
-.box-header .user-icon.user-two {
-    width: 37px;
-    height: 37px;
-    background: no-repeat center/100% url(../../assets/icons/user2.png);
-}
-
-.box-header .user-icon.user-three {
-    width: 37px;
-    height: 37px;
-    background: no-repeat center/100% url(../../assets/icons/user3.png);
-}
-
-.box-header .user-icon.user-four {
-    width: 37px;
-    height: 37px;
-    background: no-repeat center/100% url(../../assets/icons/user4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 
 .user-icon {

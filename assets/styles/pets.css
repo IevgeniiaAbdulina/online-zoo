@@ -164,7 +164,16 @@ div.pets.block {
     }
 }
 
-    /* Next & previous buttons */
+
+/* === Arrows === */
+.arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
 .arrow_elips {
     width: 62px;
     height: 62px;
@@ -174,7 +183,7 @@ div.pets.block {
     transition: 0.2s ease;
     cursor: pointer;
 }
-
+/* Next & previous buttons */
 .prev {
     transform: rotate(180deg);
     margin-left: 1180px;
