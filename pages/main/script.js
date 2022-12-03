@@ -271,13 +271,14 @@ function showSlides(n, slides) {
 var testimonials = [];
 let testimonialsParent = document.querySelector('.text-block');
 let rangeElem = document.querySelector('input[type="range"]');
-    rangeElem.min = 0;
+    rangeElem.min = 1;
     rangeElem.max = 0;
-    rangeElem.value = 1;
+
+let testimonialsOnPage = 0;
+let totalTestimonialsOnPage = 0;
 
     // count of testimonials on the screen:
 function countTestimonials(testimonialsParent) {
-    console.log('parent width: ',testimonialsParent.offsetWidth);
     if(testimonialsParent.offsetWidth <= 1000) {
         return 3;
     } else {
@@ -290,12 +291,14 @@ fetch('./data.JSON')
     .then(res => res.json())
     .then(data => {
         testimonials = data;
-        rangeElem.max = testimonials.length;
+        totalTestimonialsOnPage = testimonials.length;
     })
     .then(() => {
-        let testimonialsOnPage = countTestimonials(testimonialsParent);
+        testimonialsOnPage = countTestimonials(testimonialsParent);
+        rangeElem.max = totalTestimonialsOnPage + 1 - testimonialsOnPage;
+
         removeAllChildNodes(testimonialsParent);
-        for(let i=0; i < testimonialsOnPage; i++) {
+        for(let i=0; i < totalTestimonialsOnPage; i++) {
             let elem = testimonials[i];
             testimonilChild(elem, testimonialsParent);
         }
@@ -359,11 +362,68 @@ const testimonilChild = (testimonial, parent) => {
 }
 // =============================================
 
+// Slider move / stop
+let testimonialItems = document.querySelector('.text-block');
+let testimonialCards = document.getElementsByClassName('text-block-box');
+let wrapper = document.querySelector('.text-block-wrapper');
 
+let initCount = 1;
+let gap = 30;
 
-const rangeValue = () => {
-    let newValue = rangeElem.value;
-    console.log(newValue);
+function scrollByInterval(wrapper, offsetX) {
+    // track data
+    let isRightMoving = offsetX > 0;
+    let remainOffset = Math.abs(offsetX);
+
+    // calculate speed
+    let step = remainOffset / 10;
+
+    setInterval(() => {
+        if(remainOffset <= 0 ) {
+            return;
+        }
+        if(remainOffset >= step) {
+            if(isRightMoving) {
+                wrapper.scrollBy(step, 0);
+            } else {
+                wrapper.scrollBy(-step, 0);
+            }
+            remainOffset -= step;
+        } else {
+            if(isRightMoving) {
+                wrapper.scrollBy(remainOffset, 0);
+            } else {
+                wrapper.scrollBy(-remainOffset, 0);
+            }
+            remainOffset = 0;
+        }
+    });
 }
-rangeElem.addEventListener('input', rangeValue);
+
+let totalPassedWay = 0;
+
+function slide() {
+    let width = testimonialCards[0].offsetWidth;
+    let newCount = (rangeElem.value - initCount);
+    let scrollX = (width + gap) * newCount;
+
+    totalPassedWay += scrollX;
+    scrollByInterval(wrapper, scrollX);
+    initCount = rangeElem.value;
+};
+
+function startSlide() {
+    rangeElem.removeEventListener('input', slide);
+    totalPassedWay = 0;
+};
+
+function endSlide() {
+    slide();
+    rangeElem.addEventListener('input', slide);
+    totalPassedWay = 0;
+}
+
+rangeElem.addEventListener('input', slide);
+rangeElem.addEventListener('touchstart', startSlide);
+rangeElem.addEventListener('touchend', endSlide);
 // --------------------------------------------------------------

@@ -101,6 +101,18 @@ and (max-width: 1280px) {
         margin-right: 1.875em;
     }
     /*--------------------------------------------*/
+    /*------------ Testimonials block -----------*/
+    .text-block-container {
+        width: calc(100vw - 30px*2);
+    }
+    .text-block-wrapper {
+        width: calc(100vw - 30px*2);
+    }
+    .text-block-box {
+        width: calc((100% - 30px*3) / 3);
+        min-width: 260px;
+    }
+    /*--------------------------------------------*/
     /*------------ Footer block ---------------*/
     footer #sm-social-media{
         display: none;

@@ -276,7 +276,13 @@ and (max-width: 640px) {
         margin-bottom: 80px;
     }
     .testimonials .container {
-        padding: 0 1.250em;
+        padding: 0 1.25rem;
+    }
+    .text-block-container {
+        width: calc(100vw - 20px*2);
+    }
+    .text-block-wrapper {
+        width: calc(100vw - 20px*2);
     }
     .testimonials h3 {
         margin-bottom: 30px;
