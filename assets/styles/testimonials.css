@@ -47,7 +47,6 @@
     border-radius: 20px;
     background:  var(--gray_light);
     background-clip: border-box;
-    cursor: pointer;
     transition: all 0.5s;
 }
 

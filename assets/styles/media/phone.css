@@ -277,11 +277,11 @@ and (max-width: 320px) {
         min-width: 100%;
         max-height: 110px;
         padding: 0.625em;
+        cursor: pointer;
     }
     .text-block-box .row p {
         font-size: 0.9375em;
     }
-
 
     .text-block-box .box-body {
         width: 100%;

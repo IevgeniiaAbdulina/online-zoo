@@ -87,16 +87,6 @@ function showTopNav() {
     }
 }
 
-// Show Modal Testimonials Pop-Up:
-function showModal() {
-    document.getElementById('modal-overlay').style.display = 'flex';
-}
-
-function closeModal() {
-    document.getElementById('modal-overlay').style.display = 'none';
-}
-
-
 // --------------- **Carousel** in a block `Pets` ---------------
 
 // creating and initializing an object instance of Animal class:
@@ -300,18 +290,20 @@ fetch('./data.JSON')
         removeAllChildNodes(testimonialsParent);
         for(let i=0; i < totalTestimonialsOnPage; i++) {
             let elem = testimonials[i];
-            testimonilChild(elem, testimonialsParent);
+            let testimonialItem = testimonilChild(elem, onclicklistener);
+            testimonialsParent.append(testimonialItem);
         }
     });
 
 // create Testimonials Card ==========================
-const testimonilChild = (testimonial, parent) => {
+const testimonilChild = (testimonial, onclicklistener) => {
     const fragment = document.createDocumentFragment();
-    // console.log("create child", testimonial)
 
     let box = document.createElement('div');
         box.className = 'text-block-box';
-        box.addEventListener('click', e => showModal());
+        if(onclicklistener){
+            box.addEventListener('click', (e) => onclicklistener(testimonial));
+        }
 
     let boxHeader = document.createElement('div');
         boxHeader.className = 'box-header';
@@ -358,7 +350,8 @@ const testimonilChild = (testimonial, parent) => {
     box.append(boxHeader, boxBody);
 
     fragment.appendChild(box);
-    parent.appendChild(fragment);
+    //parent.appendChild(fragment);
+    return fragment;
 }
 // =============================================
 
@@ -427,3 +420,43 @@ rangeElem.addEventListener('input', slide);
 rangeElem.addEventListener('touchstart', startSlide);
 rangeElem.addEventListener('touchend', endSlide);
 // --------------------------------------------------------------
+// ---------------**Popup** when clicking on a review in a block `Testimonials` ---------------
+
+const windowWidth = document.querySelector('main').offsetWidth;
+const popupHolder = document.getElementById('modal');
+const modalOverlay = document.getElementById('modal-overlay');
+
+const createModalIcon = () => {
+    let closeBtn = document.createElement('div');
+        closeBtn.className = 'close-btn';
+        closeBtn.id = 'x-ic';
+        closeBtn.innerHTML = '<span class="material-symbols-outlined">close</span>';
+        closeBtn.addEventListener('click', () => closeModal());
+    return closeBtn;
+}
+
+const onclicklistener = (testimonial) => {
+    let testimonialModal = testimonilChild(testimonial);
+    let icon = createModalIcon();
+    popupHolder.append(icon, testimonialModal);
+    showModal();
+}
+
+function showModal() {
+    if(windowWidth <= 640) {
+        modalOverlay.style.display = 'flex';
+    }
+};
+
+const hideModalWindowOnBlur = (e, target) => {
+    if(target === e.currentTarget) {
+        closeModal();
+    }
+}
+
+function closeModal() {
+    removeAllChildNodes(popupHolder);
+    modalOverlay.style.display = 'none';
+};
+
+modalOverlay.addEventListener('click', (e) => hideModalWindowOnBlur(e, e.target));
