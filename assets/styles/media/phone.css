@@ -72,7 +72,7 @@ and (max-width: 320px) {
         width: 100%;
         list-style: none;
         color: black;
-        margin-top: 26px;
+        margin-top: 60px;
     }
     a.topnav-link {
         padding: 15px 0;
@@ -103,9 +103,7 @@ and (max-width: 320px) {
         align-items: center;
     }
     .banner-content::after {
-        /* transform: scale(0.26);
-        bottom: 415px;
-        left: 32px; */
+        position: absolute;
         width: 120px;
         height: 120px;
         left: 32px;

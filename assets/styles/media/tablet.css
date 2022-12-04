@@ -84,6 +84,7 @@ and (max-width: 640px) {
     #menu-links {
         position: fixed;
         width: 100%;
+        top: 0;
         left: 0;
         list-style: none;
         color: #000000;
@@ -156,6 +157,7 @@ and (max-width: 640px) {
         justify-content: center;
     }
     .banner-content::after {
+        position: absolute;
         width: 237px;
         height: 237px;
         top: 15px;

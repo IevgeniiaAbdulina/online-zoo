@@ -122,8 +122,9 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 window.onload = () => {
-    allAnimalsGroupedByPages = buildList(animals);
-    showSlides(slideIndex, slidesContent);
+    // allAnimalsGroupedByPages = buildList(animals);
+    // showSlides(slideIndex, slidesContent);
+    binddata(1);
 }
 
 const removeAllChildNodes = (parent) => {
@@ -157,10 +158,7 @@ function buildList(animalList) {
     const cardsContainer = document.getElementById('pets-container');
     const countOfCardsOnScreen = updateCountOfCards(cardsContainer);
 
-    let allAnimalsGroupedByPages = [];
-    for(let pageIndex = 0; pageIndex < pageCount; pageIndex++) {
         const updatedList = randomizeList(animalList);
-        allAnimalsGroupedByPages.push(updatedList);
 
         const cardHolder = document.createElement('div');
         cardHolder.className = 'slides-content';
@@ -169,9 +167,9 @@ function buildList(animalList) {
             const animal = updatedList[i];
             animalCard(animal, cardHolder);
         }
+        removeAllChildNodes(slideshowContainer);
         slideshowContainer.append(cardHolder);
-    }
-    return allAnimalsGroupedByPages;
+    return updatedList;
 };
 
 // create Animal Card ==========================
@@ -232,11 +230,12 @@ let flippedIsActive = false;
 function plusSlides(n, slides) {
     if(flippedIsActive) return;
     flippedIsActive = true;
-    showSlides(slideIndex += n, slides);
+    binddata(slideIndex += n);
+    //showSlides(slideIndex += n, slides);
 
     setTimeout(() => {
         flippedIsActive = false;
-    }, 1100);
+    }, 500);
 };
 
 prev.addEventListener('click', e => {
@@ -256,6 +255,12 @@ function showSlides(n, slides) {
     }
     slides[slideIndex-1].style.display = 'flex';
 };
+
+function binddata(slideIndex) {
+    allAnimalsGroupedByPages = buildList(animals);
+    showSlides(slideIndex, slidesContent);
+}
+
 // --------------------------------------------------------------
 // ----------- **Carousel** in a block `Testimonials` -----------
 var testimonials = [];
@@ -369,7 +374,7 @@ function scrollByInterval(wrapper, offsetX) {
     let remainOffset = Math.abs(offsetX);
 
     // calculate speed
-    let step = remainOffset / 10;
+    let step = remainOffset / 20;
 
     setInterval(() => {
         if(remainOffset <= 0 ) {

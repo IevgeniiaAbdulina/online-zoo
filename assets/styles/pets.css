@@ -50,8 +50,7 @@ div.pets.block {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: transform 400ms ease-out;
-    transition: 0.5s;
+    transition: all 0.2s ease-out;
 }
 
 .img-wrap {
@@ -143,16 +142,16 @@ div.pets.block {
 .slides-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 20px 28px;
     transform: translateX(0);
-    transition: transform 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .card.flipped {
    animation-name: flipped;
-   animation-duration: 1s;
+   animation-duration: 0.4s;
 }
 
 @keyframes flipped {
