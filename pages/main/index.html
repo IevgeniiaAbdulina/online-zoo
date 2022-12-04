@@ -22,14 +22,6 @@
                         <h1 id="top-petstory" class="petstory">PetStory Online</h1>
                     </a>
                 </div>
-                <ul id="menu-links">
-                    <li class="nav-link current" value="about"><a class="topnav-link" href="../main/">About</a></li>
-                    <li class="nav-link" value="map"><a class="topnav-link" href="#">Map</a></li>
-                    <li class="nav-link" value="zoos"><a class="topnav-link" href="#">Zoos</a></li>
-                    <li class="nav-link" value="donate"><a class="topnav-link" href="../donate/">Donate</a></li>
-                    <li class="nav-link" value="contact"><a class="topnav-link" href="#contact">Contact Us</a></li>
-                    <li><a class="topnav-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" rel="noopener">Designed by ©</a></li>
-                </ul>
                 <a id="top-icon-menu" href="javascript:void(0);" class="icon-menu" onclick="showTopNav()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -48,6 +40,15 @@
             </div>
         </div>
     </header>
+    <ul id="menu-links">
+        <li class="nav-link current" value="about"><a class="topnav-link" href="../main/">About</a></li>
+        <li class="nav-link" value="map"><a class="topnav-link" href="#">Map</a></li>
+        <li class="nav-link" value="zoos"><a class="topnav-link" href="#">Zoos</a></li>
+        <li class="nav-link" value="donate"><a class="topnav-link" href="../donate/">Donate</a></li>
+        <li class="nav-link" value="contact"><a class="topnav-link" href="#contact">Contact Us</a></li>
+        <li><a class="topnav-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" rel="noopener">Designed by ©</a></li>
+    </ul>
+    <div class="top-menu-overlay"></div>
     <main>
         <!-- BANNER BLOCK -->
         <div class="banner block">
@@ -76,108 +77,12 @@
         </div>
         <!-- PETS BLOCK -->
         <div class="pets block">
-            <div class="container">
+            <div id="pets-container" class="container">
                 <div class="arrows">
-                    <div class="arrow_elips"></div>
-                    <div class="arrow_elips"></div>
+                    <div class="arrow_elips prev"></div>
+                    <div class="arrow_elips next"></div>
                 </div>
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img class="pets-img" src="../../assets/images/pandas.png" alt="pet image">
-                            <div class="pets-text-hovered">
-                                <p class="pets-title">giant Pandas</p>
-                                <p class="sm-paragraph">Native to Southwest China</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="pets-text">
-                                <p class="pets-title">giant Pandas</p>
-                                <p class="sm-paragraph">Native to Southwest China</p>
-                            </div>
-                            <div class="banana-bamboo_icon"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img class="pets-img" src="../../assets/images/eagles.png" alt="pet image">
-                            <div class="pets-text-hovered">
-                                <p class="pets-title">Eagles</p>
-                                <p class="sm-paragraph">Native to South America</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="pets-text">
-                                <p class="pets-title">Eagles</p>
-                                <p class="sm-paragraph">Native to South America</p>
-                            </div>
-                            <div class="meet-fish_icon"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img class="pets-img" src="../../assets/images/gorillas.png" alt="pet image">
-                            <div class="pets-text-hovered">
-                                <p class="pets-title">Gorillas</p>
-                                <p class="sm-paragraph">Native to Congo</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="pets-text">
-                                <p class="pets-title">Gorillas</p>
-                                <p class="sm-paragraph">Native to Congo</p>
-                            </div>
-                            <div class="banana-bamboo_icon"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img class="pets-img" src="../../assets/images/sloth.png" alt="pet image">
-                            <div class="pets-text-hovered">
-                                <p class="pets-title">Two-toed Sloth</p>
-                                <p class="sm-paragraph">Mesoamerica, South America</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="pets-text">
-                                <p class="pets-title">Two-toed Sloth</p>
-                                <p class="sm-paragraph">Mesoamerica, South America</p>
-                            </div>
-                            <div class="banana-bamboo_icon"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img class="pets-img" src="../../assets/images/cheetahs.png" alt="pet image">
-                            <div class="pets-text-hovered">
-                                <p class="pets-title">cheetahs</p>
-                                <p class="sm-paragraph">Native to Africa</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="pets-text">
-                                <p class="pets-title">cheetahs</p>
-                                <p class="sm-paragraph">Native to Africa</p>
-                            </div>
-                            <div class="meet-fish_icon"></div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrap">
-                            <img class="pets-img" src="../../assets/images/penguins.png" alt="pet image">
-                            <div class="pets-text-hovered">
-                                <p class="pets-title">Penguins</p>
-                                <p class="sm-paragraph">Native to Antarctica</p>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="pets-text">
-                                <p class="pets-title">Penguins</p>
-                                <p class="sm-paragraph">Native to Antarctica</p>
-                            </div>
-                            <div class="meet-fish_icon"></div>
-                        </div>
-                    </div>
+                <div class="card-grid slideshow-container">
                 </div>
             </div>
             <button class="btn rounded" type="button">choose your favorite</button>
@@ -217,105 +122,16 @@
         </div>
         <!-- TESTIMONIALS BLOCK -->
         <div id="modal-overlay" class="modal-overlay">
-            <div id="modal" class="pop-up">
-                <div id="x-ic" class="close-btn" onclick="closeModal()">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div id="text-block-box" class="text-block-box">
-                    <div class="box-header">
-                        <div id="user-ic" class="user-icon user-one"></div>
-                        <div class="personal-info">
-                            <h4 id="user-name" class="user-name">Oskar Samborsky</h4>
-                            <div class="row">
-                                <p id="user-location" class="location">Local Austria</p>
-                                <p id="post-date" class="date">Yesterday</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="box-body" class="box-body">
-                        <p id="user-message">Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.
-                            The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo
-                            The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo.
-                            The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo
-                            </p>
-                    </div>
-                </div>
-            </div>
+            <div id="modal" class="pop-up"></div>
         </div>
         <div class="testimonials block">
             <div class="container">
                 <h3>Testimonials</h3>
-                <div class="text-block-wrapper">
-                    <div class="text-block">
-                        <div class="text-block-box" onclick="showModal()">
-                            <div class="box-header">
-                                <div id="user-ic" class="user-icon user-one"></div>
-                                <div class="personal-info">
-                                    <h4  id="user-name" class="user-name">Michael John</h4>
-                                    <div class="row">
-                                        <p id="user-location" class="location">Local Austria</p>
-                                        <p id="post-date" class="date">Today</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <p id="user-message" class="sm-paaragraph">The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="text-block-box" onclick="showModal()">
-                            <div class="box-header">
-                                <div id="user-ic" class="user-icon user-two"></div>
-                                <div class="personal-info">
-                                    <h4  id="user-name" class="user-name">Oskar Samborsky</h4>
-                                    <div class="row">
-                                        <p id="user-location" class="location">Local Austria</p>
-                                        <p id="post-date" class="date">Yesterday</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <p id="user-message">Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.
-                                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="text-block-box" onclick="showModal()">
-                            <div class="box-header">
-                                <div id="user-ic" class="user-icon user-three"></div>
-                                <div class="personal-info">
-                                    <h4  id="user-name" class="user-name">Fredericka Michelin</h4>
-                                    <div class="row">
-                                        <p id="user-location" class="location">Local Austria</p>
-                                        <p id="post-date" class="date">Yesterday</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <p id="user-message">The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
-                                    The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="text-block-box" onclick="showModal()">
-                            <div class="box-header">
-                                <div id="user-ic" class="user-icon user-four"></div>
-                                <div class="personal-info">
-                                    <h4  id="user-name" class="user-name">Mila Riksha</h4>
-                                    <div class="row">
-                                        <p id="user-location" class="location">Local Austria</p>
-                                        <p id="post-date" class="date">Yesterday</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <p id="user-message">My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son
-                                    </p>
-                            </div>
-                        </div>
+                <div class="text-block-container">
+                    <div class="text-block-wrapper">
+                        <div class="text-block"></div>
                     </div>
-                    <input type="range" value="1" min="1" max="8" step="1">
+                    <input type="range">
                     <button class="btn square" type="button">leave feedback</button>
                 </div>
             </div>

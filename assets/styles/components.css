@@ -35,36 +35,6 @@ button.square {
 .btn:disabled {
     background-color: var(--gray);
 }
-
-/* === Arrows === */
-.arrows {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.arrow_elips {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background: no-repeat center/35% url(../../assets/icons/arrow_right.svg) var(--orange);
-    margin-right: 1180px;
-    transition: 0.2s;
-}
-
-.arrow_elips:nth-child(1) {
-    transform: rotate(180deg);
-    margin-left: 1180px;
-}
-
-.arrow_elips:hover {
-    background-color: #E47209;
-}
-
-.arrow_elips:active {
-    background-color: var(--green);
-}
 /*-------------------------------------------------*/
 /* === Input <range> === */
 input {
@@ -113,7 +83,7 @@ input {
   }
 /* ---------------------------------------------- */
 
-/* Modal Testimonials Pop-Up */
+/* ----------- Modal Testimonials Pop-Up ----------- */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -129,22 +99,28 @@ input {
   color: var(--orange);
   transform: translateY(-20px);
   cursor: pointer;
+  z-index: 10;
 }
 
 #modal-overlay {
   display: none;
 }
+
 .modal-overlay {
+  position: fixed;
   width: 100vw;
   height: 100%;
-  position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.7);
-  z-index: 100;
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }
+
 #modal {
   position: absolute;
   width: 320px;
@@ -152,6 +128,7 @@ input {
   background: transparent;
   display: flex;
   padding: 20px 36px 20px 20px;
+  z-index: 10;
 }
 #modal .text-block-box {
   order: 1;
@@ -159,8 +136,10 @@ input {
   min-width: 267px;
   height: 390px;
   max-height: 390px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.32);
 }
 
 #modal .box-body {
   height: 100%;
 }
+/* ---------------------------------------------- */

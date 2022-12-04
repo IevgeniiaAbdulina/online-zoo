@@ -1,23 +1,48 @@
 /* ----------- Non-Retina Screens ----------- */
 @media screen
     and (min-device-width: 1280px)
-    and (max-device-width: 1600px), (min-width: 1600px)
-    and
-    (-webkit-min-device-pixel-ratio: 1) {
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1) {
         /*-------------------- Header ----------------------*/
-        header #menu-links {
+        #menu-links {
             display: none;
         }
         #top-icon-menu {
             display: none;
         }
         /*-------------------------------------------------*/
+        /*-------------- Pets block ---------------*/
+
         .card-grid {
-            gap: 1.250em 1.750em;
+            gap: 1.25rem 1.75rem;
         }
+        /*-------------------------------------------------*/
         /*------------ Footer block ---------------*/
         footer #sm-social-media{
             display: none;
         }
         /*--------------------------------------------*/
 }
+@media screen
+    and (min-width: 1600px)
+    and (max-width: 2880px) {
+        /*-------------------- Header ----------------------*/
+        #menu-links {
+            display: none;
+        }
+        #top-icon-menu {
+            display: none;
+        }
+        /*-------------------------------------------------*/
+        /*-------------- Pets block ---------------*/
+
+        .card-grid {
+            gap: 1.25rem 1.75rem;
+        }
+        /*-------------------------------------------------*/
+        /*------------ Footer block ---------------*/
+        footer #sm-social-media{
+            display: none;
+        }
+        /*--------------------------------------------*/
+    }

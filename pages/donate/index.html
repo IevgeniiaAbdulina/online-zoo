@@ -10,6 +10,7 @@
     <title>Online-zoo</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <!-- HEADER -->
@@ -21,14 +22,6 @@
                         <h1 id="top-petstory" class="petstory">PetStory Online</h1>
                     </a>
                 </div>
-                <ul id="menu-links">
-                    <li class="nav-link current" value="about"><a class="topnav-link" href="../main/">About</a></li>
-                    <li class="nav-link" value="map"><a class="topnav-link" href="#">Map</a></li>
-                    <li class="nav-link" value="zoos"><a class="topnav-link" href="#">Zoos</a></li>
-                    <li class="nav-link" value="donate"><a class="topnav-link" href="../donate/">Donate</a></li>
-                    <li class="nav-link" value="contact"><a class="topnav-link" href="#contact">Contact Us</a></li>
-                    <li><a class="topnav-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" rel="noopener">Designed by ©</a></li>
-                </ul>
                 <a id="top-icon-menu" href="javascript:void(0);" class="icon-menu" onclick="showTopNav()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -47,6 +40,15 @@
             </div>
         </div>
     </header>
+    <ul id="menu-links">
+        <li class="nav-link" value="about"><a class="topnav-link" href="../main/">About</a></li>
+        <li class="nav-link" value="map"><a class="topnav-link" href="#">Map</a></li>
+        <li class="nav-link" value="zoos"><a class="topnav-link" href="#">Zoos</a></li>
+        <li class="nav-link current" value="donate"><a class="topnav-link" href="../donate/">Donate</a></li>
+        <li class="nav-link" value="contact"><a class="topnav-link" href="#contact">Contact Us</a></li>
+        <li><a class="topnav-link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank" rel="noopener">Designed by ©</a></li>
+    </ul>
+    <div class="top-menu-overlay"></div>
     <main>
         <!-- BANNER BLOCK -->
         <section class="banner-block"></section>
@@ -78,8 +80,8 @@
                             <ul class="feed-range-dot-container">
                                 <li id="range-5000" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#5000" class="yellow-dot" type="radio" name="range" value="5000">
+                                        <label for="range#5000" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">5000</p>
                                         </label>
@@ -87,8 +89,8 @@
                                 </li>
                                 <li id="range-2000" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#2000" class="yellow-dot" type="radio" name="range" value="2000">
+                                        <label for="range#2000" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">2000</p>
                                         </label>
@@ -96,8 +98,8 @@
                                 </li>
                                 <li id="range-1000" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input id="checked-dot-lg" class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#1000" class="yellow-dot" type="radio" name="range" value="1000">
+                                        <label for="range#1000" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">1000</p>
                                         </label>
@@ -105,8 +107,8 @@
                                 </li>
                                 <li aria-live="range-500" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#500" class="yellow-dot" type="radio" name="range" value="500">
+                                        <label for="range#500" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">500</p>
                                         </label>
@@ -114,8 +116,8 @@
                                 </li>
                                 <li id="range-250" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#250" class="yellow-dot" type="radio" name="range" value="250">
+                                        <label for="range#250" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">250</p>
                                         </label>
@@ -123,8 +125,8 @@
                                 </li>
                                 <li id="range-100" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input id="checked-dot-sm" class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#100" class="yellow-dot" type="radio" name="range" value="100">
+                                        <label for="range#100" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">100</p>
                                         </label>
@@ -132,8 +134,8 @@
                                 </li>
                                 <li id="range-50" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#50" class="yellow-dot" type="radio" name="range" value="50">
+                                        <label for="range#50" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">50</p>
                                         </label>
@@ -141,8 +143,8 @@
                                 </li>
                                 <li id="range-25" class="feed-range-dot">
                                     <div class="range-control" for="range">
-                                        <input class="yellow-dot" type="radio" name="range">
-                                        <label class="range-value">
+                                        <input id="range#25" class="yellow-dot" type="radio" name="range" value="25">
+                                        <label for="range#25" class="range-value">
                                             <div class="range-dollar-ic"></div>
                                             <p class="label-range">25</p>
                                         </label>
@@ -153,7 +155,7 @@
                     </div>
                     <div class="another-amount">
                         <form action="">
-                            <input type="number" class="another-amount-input" placeholder="Another amount" min="1" max="9999">
+                            <input id="amount-input" type="number" class="another-amount-input" placeholder="Another amount" min="1" max="9999" maxlength="4" oninput="limitInputChar(this)">
                         </form>
                         <img class="dollar-ic" src="../../assets/icons/dollar-ic-2.svg" alt="dollar icon">
                     </div>

@@ -5,7 +5,6 @@
 }
 .backstage-content {
     display: flex;
-    /* justify-content: space-between; */
     gap: 87px;
 }
 
