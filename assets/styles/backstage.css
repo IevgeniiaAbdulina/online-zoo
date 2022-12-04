@@ -1,0 +1,41 @@
+/*------------------- Backstage block -------------------*/
+.backstage.block {
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+.backstage-content {
+    display: flex;
+    gap: 87px;
+}
+
+.backstage-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    backdrop-filter: blur(2px);
+}
+
+.backstage-text {
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--black_blue);
+}
+
+.backstage-text p:nth-child(2) {
+    margin: 20px 0;
+}
+
+.backstage-text .subtitle {
+    margin-top: 54px;
+    margin-bottom: 34px;
+}
+
+.backstage-decoration {
+    position: absolute;
+    right: 0;
+    margin-top: -140px;
+}
+/*-------------------------------------------------*/

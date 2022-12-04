@@ -1,0 +1,226 @@
+/* -------------- Tablet Landscape Screens -------------- */
+/* === Main Page === */
+@media screen
+    and (min-width: 640px)
+    and (max-width: 1000px) {
+        /* ----------- Body page style ------------ */
+        header {
+            padding: 0.875rem 1.875rem;
+        }
+        #menu-links {
+            display: none;
+        }
+        #top-icon-menu {
+            display: none;
+        }
+        nav a {
+            margin-right: 2rem;
+        }
+        header .logo {
+            margin-right: 2rem;
+        }
+        header.menu-isopened ~ #menu-links {
+            display: none;
+        }
+        /*--------------------------------------------*/
+        /*------------ Banner block ---------------*/
+        .banner-content {
+            margin-top: 2.625rem;
+        }
+        .banner > img {
+            max-width: 100%;
+            height: 36.500rem;
+            top: 0;
+        }
+        .banner-content::after {
+            position: absolute;
+            top: -2.25rem;
+            right: 7.75rem;
+            width: 23rem;
+            height: 23rem;
+
+        }
+        h2.banner-title {
+            font-size: 5.125rem;
+        }
+        /*--------------------------------------------*/
+        .backstage .container,
+        .pets .container,
+        .testimonials .container,
+        footer .container {
+            padding: 0 1.875rem;
+        }
+        /*------------ Backstage block ---------------*/
+        .backstage.block {
+            margin-top: 100px;
+        }
+        .backstage-content > img {
+            max-width: calc(100%/2 - 0.938rem);
+        }
+        .backstage-content {
+            gap: 1.875rem;
+        }
+        .backstage-decoration {
+            transform: translate(150%);
+            display: none;
+        }
+        .backstage-text {
+            max-width: 50%;
+        }
+        /*--------------------------------------------*/
+        /*-------------- Pets block ---------------*/
+        div.pets.block {
+            margin-bottom: 0;
+        }
+        .card-grid {
+            row-gap: 5.750rem;
+            column-gap: 1rem;
+        }
+        .card {
+            /* max-width: calc((100vw/3) - 1.25rem*2); */
+            width: 277px;
+        }
+        .arrow_elips:nth-child(1) {
+            margin-left: calc(100%/2 - 8rem);
+        }
+        .arrow_elips {
+            margin-right: calc(100%/2 - 8rem);
+        }
+        .pets-decoration.right {
+            max-width: 11.250rem;
+            max-height: auto;
+            position: relative;
+            align-self: flex-end;
+            margin-top: -10rem;
+        }
+        .pets-decoration.left {
+            position: relative;
+            max-height: 12.5rem;
+            align-self: flex-start;
+            margin-top: -60px;
+        }
+        .slides-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 92px 30px;
+            transform: translateX(0);
+            transition: transform 1s ease-in-out;
+        }
+        /*--------------------------------------------*/
+        /*------------ Pick-and-Feed Block -----------*/
+        .pick-and-feed.block {
+            padding: 1.875rem 1.875rrem 3.125rem;
+        }
+        .pick-and-feed .container {
+            padding: 30px 30px 50px;
+        }
+        .how-it-works .wrapper {
+            padding: 0;
+            justify-content: center;
+        }
+        .arrow-right {
+            margin-left: 1.875rem;
+            margin-right: 1.875rem;
+        }
+        /*--------------------------------------------*/
+        /*------------ Testimonials block -----------*/
+        .text-block-container {
+            width: calc(100vw - 30px*2);
+        }
+        .text-block-wrapper {
+            width: calc(100vw - 30px*2);
+        }
+        .text-block-box {
+            width: calc((100% - 30px*2) / 3);
+            min-width: 290px;
+        }
+        .text-block-wrapper {
+            overflow-y: hidden;
+            padding: 4px;
+        }
+        .text-block-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        .text-block {
+            column-gap: 1.875rem;
+        }
+        .testimonials input[type=range] {
+            max-width: 390px;
+        }
+        /*--------------------------------------------*/
+        /*------------ Footer block ---------------*/
+        footer .container {
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
+        footer #sm-social-media{
+            display: none;
+        }
+        footer .input-wrapper {
+            margin-top: 0;
+        }
+        footer input[type=email] {
+            margin-top: 15px;
+        }
+        /*--------------------------------------------*/
+}
+
+@media screen
+    and (min-width: 640px)
+    and (max-width: 780px) {
+        header {
+            padding: 0.875rem 1.25rem;
+        }
+        nav a {
+            margin-right: 1rem;
+        }
+        header .logo {
+            margin-right: 1rem;
+        }
+        header.menu-isopened ~ #menu-links {
+            display: none;
+        }
+        .card {
+            width: 277px;
+        }
+    }
+
+/* === Donate Page === */
+@media screen
+    and (min-width: 640px)
+    and (max-width: 1000px) {
+        /*------------ DONATION INFORMATION BLOCK ---------------*/
+        section.feed {
+            padding-top: 40px;
+        }
+        section.feed .container {
+            padding: 0 1.875rem;
+        }
+        section.feed .feed-text h3:nth-child(1) {
+            width: 90%;
+        }
+        section.feed .feed-donation-info {
+            padding: 10px 40px 45px;
+        }
+        section.feed .subtitle {
+            text-align: center;
+        }
+        section.feed .feed-range-container {
+            width: calc(100vw - (1.875rem*2 + 65px*2));
+        }
+        section.feed form.feed-range {
+            max-width: 100%;
+        }
+        form.feed-range .feed-range-line {
+            max-width: calc(100% - 16px*2);
+        }
+        form.feed-range ul.feed-range-dot-container {
+            max-width: calc(100vw - (1.875rem*2 + 65px*2));
+        }
+        #range-5000.feed-range-dot {
+            display: none;
+        }
+        /*--------------------------------------------*/
+    }

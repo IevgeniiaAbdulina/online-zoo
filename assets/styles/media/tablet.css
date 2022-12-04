@@ -1,0 +1,416 @@
+/* -------------- Tablet Screens -------------- */
+/* === Main Page === */
+@media screen
+and (min-width: 320px)
+and (max-width: 640px) {
+    /*------------ Header block ---------------*/
+    header {
+        position: fixed;
+        width: 100vw;
+        height: 34px;
+        padding: 0.625rem 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+    }
+    header .container {
+        width: 100vw;
+        padding: 0 0.625rem;
+    }
+    .navigation-bar,
+    .design-author {
+        display: none;
+    }
+    header .logo {
+        max-width: fit-content;
+        max-height: inherit;
+    }
+    header .sm-logo {
+        transform: scale(0.575) translateX(-30px);
+        border: none;
+        margin-right: 0;
+    }
+    /* when the Humburger menu is opened: */
+    header .navigation-wrapper.menu-isopened-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch
+    }
+    header.menu-isopened {
+        background-color: #FFFFFF;
+        height: auto;
+    }
+    header #top-logo.m-logo {
+        width: 67px;
+        height: 41.6px;
+        margin: 0;
+        border: 1px solid var(--orange);
+    }
+    header #top-petstory.m-logo-tx {
+        color: var(--orange);
+        font-size: 1em;
+        line-height: 0.75em;
+    }
+    header #top-petstory.m-logo-tx::after {
+        content: url(../../icons/bamboo-orange.svg);
+        position: relative;
+        width: 7px;
+        height: 20px;
+        right: 46px;
+    }
+    /*--------------------------------------------*/
+    /*------------ Humburger Menu ---------------*/
+    .topnav {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .topnav #top-icon-menu {
+        display: block;
+    }
+    #menu-links {
+        display: none;
+    }
+    #menu-links {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        list-style: none;
+        color: #000000;
+        margin-top: 60px;
+        padding: 0 10px;
+        background: white;
+        z-index: 9;
+        -webkit-box-shadow: 0px 4px 8px -8px rgba(66, 68, 90, 1);
+        box-shadow: 0px 4px 8px -8px rgba(66, 68, 90, 1);
+    }
+    header.menu-isopened ~ .top-menu-overlay {
+        display: block;
+    }
+    .top-menu-overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 8;
+    }
+    a.topnav-link {
+        padding: 15px 0;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    a.icon-menu {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin: 0;
+        color: white;
+        font-size: 18px;
+    }
+    /*--------------------------------------------*/
+    .backstage .container,
+    .pets .container,
+    .testimonials .container,
+    footer .container {
+        padding: 0 1.250rem;
+    }
+    /*------------ Banner Block ---------------*/
+
+    .banner-content {
+        width: 100%;
+        padding: 0 1.250rem;
+        margin-top: 2.125em;
+        align-content: space-between;
+        justify-content: center;
+    }
+    .banner-content::after {
+        position: absolute;
+        width: 237px;
+        height: 237px;
+        top: 15px;
+        left: 322px;
+    }
+    h2.banner-title {
+        width: 258px;
+        height: auto;
+        font-size: 3.375em;
+        align-self: flex-end;
+        margin-top: 40px;
+        margin-bottom: 0;
+        z-index: 1;
+    }
+    .banner-content a {
+        align-self: flex-start;
+    }
+    .banner-content button {
+        border: none;
+    }
+    .banner img {
+        width: 100%;
+        height: 370px;
+    }
+    /*--------------------------------------------*/
+    /*------------ Backstage Block ---------------*/
+    .backstage.block {
+        margin-bottom: 0;
+    }
+    .backstage-content img {
+        display: none;
+    }
+    .backstage-decoration {
+        transform: translateX(20%) scale(0.78);
+        z-index: -1;
+    }
+    .backstage .container {
+        padding: 0 20px;
+    }
+    .backstage-content {
+        width: 80%;
+    }
+    .backstage-text {
+        max-width: 100%;
+    }
+    /*--------------------------------------------*/
+    /*---------------- Pets Block ----------------*/
+    div.pets.block {
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+    .pets .container {
+        padding: 0 1.250em;
+    }
+    .card-grid {
+        max-height: 794px;
+        padding: 4px;
+        row-gap: 5.75em;
+        column-gap: 1em;
+        overflow: hidden;
+    }
+    .card {
+        max-width: calc((100%/2) - 0.875em);
+    }
+    .arrow_elips {
+        margin-right: calc(100%/2 - 4.75em);
+    }
+    .arrow_elips:nth-child(1) {
+        margin-left: calc(100%/2 - 4.75em);
+    }
+    .pets-decoration.left {
+        position: relative;
+        max-height: 12.5em;
+        align-self: flex-start;
+        margin-top: -60px;
+
+    }
+    .pets-decoration.right {
+        max-width: 11.25em;
+        max-height: auto;
+        position: relative;
+        align-self: flex-end;
+        margin-top: -10em;
+    }
+    .slides-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 92px 30px;
+        transform: translateX(0);
+        transition: transform 1s ease-in-out;
+    }
+    /*--------------------------------------------*/
+    /*------------ Pick-and-Feed Block -----------*/
+    .pick-and-feed.block {
+        padding: 1.250em 0;
+    }
+    .pick-and-feed .container {
+        padding: 10px 20px 60px;
+    }
+    .how-it-works .wrapper {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    .arrow-right {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        margin-left: calc(100%/3 - 70px);
+        margin-top: -46px;
+        z-index: 2;
+        margin-bottom: 0;
+        background: no-repeat center/100% url(../../icons/arrow-green.svg);
+    }
+    .wrapper .arrow-right:nth-child(2) {
+        margin-left: calc(100%/3  + 145px);
+    }
+    /*--------------------------------------------*/
+    /*------------ Testimonials Block ------------*/
+    .testimonials.block {
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    .testimonials .container {
+        padding: 0 1.25rem;
+    }
+    .text-block-container {
+        width: calc(100vw - 20px*2);
+    }
+    .text-block-wrapper {
+        width: calc(100vw - 20px*2);
+    }
+    .testimonials h3 {
+        margin-bottom: 30px;
+    }
+    .text-block-box {
+        min-width: 100%;
+        max-height: 110px;
+        padding: 15px 15px 8px;
+        cursor: pointer;
+    }
+    .text-block-box .box-body {
+        width: 100%;
+        height: 34px;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .text-block-box .box-body p {
+        font-size: 15px;
+        line-height: 120%;
+    }
+    .text-block {
+        max-height: 370px;
+        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 4px;
+    }
+    input[type=range] {
+        display: none;
+    }
+    .text-block-wrapper button {
+        margin-top: 40px;
+        align-self: center;
+    }
+    .testimonials-decoration {
+        transform: scale(0.5);
+        right: -62px;
+        margin-top: -160px;
+    }
+    /*--------------------------------------------*/
+    /*-------------- Footer Block ---------------*/
+    #contact .container {
+        padding: 12px 20px;
+    }
+    footer form.subscribe {
+        display: none;
+    }
+    footer .subscribe-row {
+        margin-bottom: 32px;
+    }
+    footer .nav-link a {
+        margin-right: 0;
+    }
+    footer .nav-bar {
+        width: 50%;
+    }
+    footer .links-wrapper {
+        justify-content: flex-start;
+    }
+    footer nav ul {
+        justify-content: space-between;
+    }
+    footer .attribution {
+        width: 50%;
+        text-align: right;
+        margin-top: 20px;
+
+    }
+    footer .attribution a:nth-child(2) p {
+        margin-bottom: 0;
+    }
+    footer #lg-social-media {
+        display: none;
+    }
+    footer #sm-social-media {
+        position: absolute;
+        display: flex;
+        right: 20px;
+    }
+    footer #sm-social-media a,
+    footer #sm-social-media a img {
+        margin-right: 0;
+    }
+    footer #sm-social-media li {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    /*--------------------------------------------*/
+}
+
+/* === Donate Page === */
+@media screen
+and (min-width: 320px)
+and (max-width: 640px) {
+    /*------------ DONATION INFORMATION BLOCK ---------------*/
+    section.feed {
+        padding-top: 30px;
+    }
+    section.feed .container {
+        padding: 0 1.25rem;
+    }
+    section.feed .feed-text h3:nth-child(1) {
+        width: 100%;
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+    section.feed .feed-text h3:nth-child(3) {
+        margin-top: 30px;
+    }
+    section.feed .feed-text {
+        margin-bottom: 30px;
+    }
+    section.feed .feed-count-content {
+        max-width: 40%;
+    }
+    section.feed img.animals-widget {
+        max-width: 50%;
+        height: auto;
+    }
+    section.feed .feed-donation-info {
+        padding: 30px 0 30px;
+    }
+    section.feed .feed-range-container {
+        width: calc(100vw - (1.25rem*2));
+    }
+    .feed-range-container p:nth-child(1) {
+        margin-left: 10px;
+    }
+    section.feed form.feed-range {
+        max-width: 100%;
+    }
+    form.feed-range .feed-range-line {
+        max-width: calc(100% - 35px*2);
+    }
+    form.feed-range ul.feed-range-dot-container {
+        max-width: calc(100% - (35px*2));
+    }
+    #range-5000.feed-range-dot,
+    #range-2000.feed-range-dot,
+    #range-1000.feed-range-dot {
+        display: none;
+    }
+    /*-------------------------------------------------------*/
+}

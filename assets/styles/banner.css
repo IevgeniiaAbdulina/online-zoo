@@ -1,0 +1,51 @@
+/*----------------- Banner block --------------------*/
+.banner .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-content {
+    position: absolute;
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2.banner-title {
+    width: 500px;
+    height: auto;
+    margin-bottom: 60px;
+    font-family: var(--font-family-base);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 106px;
+    line-height: 75%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    z-index: 1;
+}
+
+h2.banner-title span {
+    color: var(--yellow);
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    top: 0;
+    object-fit: cover;
+}
+
+.banner-content::after {
+    position: relative;
+    content: "";
+    width: 465px;
+    height: 465px;
+    bottom: 584px;
+    right: 91px;
+    border-radius: 50%;
+    background: var(--orange-btn);
+}
+/*-------------------------------------------------*/
