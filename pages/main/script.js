@@ -279,7 +279,7 @@ function countTestimonials(testimonialsParent) {
 };
 
 // get users data:
-fetch('./data.JSON')
+fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         testimonials = data;
