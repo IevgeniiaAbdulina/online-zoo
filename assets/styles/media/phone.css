@@ -88,10 +88,6 @@ and (max-width: 320px) {
         color: white;
         font-size: 18px;
     }
-    /* .topnav a.topnav-link:hover + li.nav-link.current{
-        color: var(--orange);
-        font-weight: 700;
-    } */
     /*--------------------------------------------*/
     /*------------ Banner Block ---------------*/
     .banner-content {
@@ -142,8 +138,6 @@ and (max-width: 320px) {
     }
     .backstage-decoration {
         transform: scale(0.36) translate(280px, -280px);
-        /* right: -108px;
-        top: 204px; */
         z-index: -1;
     }
     .backstage .container {
@@ -198,6 +192,16 @@ and (max-width: 320px) {
     }
     .pets .btn {
         max-width: calc(100vw - 1.25rem);
+    }
+    .slides-content {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px 20px;
+        transform: translateX(0);
+        transition: transform 1s ease-in-out;
     }
     /*--------------------------------------------*/
     /*------------ Pick-and-Feed Block -----------*/

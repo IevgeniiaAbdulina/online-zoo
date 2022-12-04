@@ -122,8 +122,6 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 window.onload = () => {
-    // allAnimalsGroupedByPages = buildList(animals);
-    // showSlides(slideIndex, slidesContent);
     binddata(1);
 }
 
@@ -231,7 +229,6 @@ function plusSlides(n, slides) {
     if(flippedIsActive) return;
     flippedIsActive = true;
     binddata(slideIndex += n);
-    //showSlides(slideIndex += n, slides);
 
     setTimeout(() => {
         flippedIsActive = false;
@@ -355,7 +352,6 @@ const testimonilChild = (testimonial, onclicklistener) => {
     box.append(boxHeader, boxBody);
 
     fragment.appendChild(box);
-    //parent.appendChild(fragment);
     return fragment;
 }
 // =============================================
