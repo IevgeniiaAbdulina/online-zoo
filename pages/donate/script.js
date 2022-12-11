@@ -97,6 +97,18 @@ window.onload = () => {
     adjustCheckedAmount();
 }
 
+// reset the `Another amount` field value:
+function resetAmountValue() {
+    inputValue = 100;
+    adjustCheckedAmount();
+    document.querySelectorAll('.yellow-dot').forEach(elem => {
+        console.log(elem)
+        elem.blur();
+    });
+}
+
+window.onresize = resetAmountValue;
+
 function adjustCheckedAmount() {
     amountInput.value = inputValue;
     amountSelected.checked = true;
